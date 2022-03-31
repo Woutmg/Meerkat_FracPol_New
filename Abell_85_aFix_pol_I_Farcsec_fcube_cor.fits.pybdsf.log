@@ -1,0 +1,513 @@
+
+========================================================================
+Tue 29-03-2022 17:16:47:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Tue 29-03-2022 17:16:47:: INFO    : PyBDSF version 1.9.1
+Tue 29-03-2022 17:16:47:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        output_all           = True
+                                        rms_box              = (30, 10)
+                                        trim_box             = (0.0, 2000.0, 0.0, 2000.0)
+Tue 29-03-2022 17:16:47:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Tue 29-03-2022 17:16:47:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Tue 29-03-2022 17:16:50:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 2000, 2000)
+Tue 29-03-2022 17:16:50:: USERINFO: Image size .............................. : (2000, 2000) pixels
+Tue 29-03-2022 17:16:50:: USERINFO: Number of channels ...................... : 12
+Tue 29-03-2022 17:16:50:: USERINFO: Number of Stokes parameters ............. : 1
+Tue 29-03-2022 17:16:50:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Tue 29-03-2022 17:16:50:: INFO    : Equinox of image is 2000.000000.
+Tue 29-03-2022 17:16:50:: INFO    : Overwriting output files (if any) in directory ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/
+Tue 29-03-2022 17:17:01:: USERINFO: --> Channels averaged with uniform weights
+Tue 29-03-2022 17:17:01:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Tue 29-03-2022 17:17:01:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Tue 29-03-2022 17:17:01:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Tue 29-03-2022 17:17:02:: INFO    : Raw mean (Stokes I) =  0.0111 mJy and raw rms =  0.4034 mJy 
+Tue 29-03-2022 17:17:02:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0111 mJy 
+Tue 29-03-2022 17:17:02:: USERINFO: Flux from sum of (non-blank) pixels ..... : 1.024 Jy
+Tue 29-03-2022 17:17:02:: INFO    : Estimated bmpersrc_th =   34.59
+Tue 29-03-2022 17:17:02:: INFO    : Parameter confused is False
+Tue 29-03-2022 17:17:02:: USERINFO: --> Calculating background rms and mean images
+Tue 29-03-2022 17:17:02:: INFO    : Estimated size of brightest source (pixels) = 5
+Tue 29-03-2022 17:17:02:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 118
+Tue 29-03-2022 17:17:14:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Tue 29-03-2022 17:17:14:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Tue 29-03-2022 17:17:25:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels
+Tue 29-03-2022 17:17:25:: INFO    : Background rms and mean images computed
+Tue 29-03-2022 17:17:25:: USERINFO: --> Variation in rms image significant
+Tue 29-03-2022 17:17:25:: USERINFO: --> Using 2D map for background rms
+Tue 29-03-2022 17:17:25:: USERINFO: --> Variation in mean image significant
+Tue 29-03-2022 17:17:25:: USERINFO: --> Using 2D map for background mean
+Tue 29-03-2022 17:17:25:: USERINFO: Min/max values of background rms map .... : (3.21e-06, 2.04e-03) Jy/beam
+Tue 29-03-2022 17:17:25:: USERINFO: Min/max values of background mean map ... : (-5.20e-05, 2.10e-03) Jy/beam
+Tue 29-03-2022 17:17:25:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.rmsd_I.fits
+Tue 29-03-2022 17:17:25:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.mean_I.fits
+Tue 29-03-2022 17:17:25:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.norm_I.fits
+Tue 29-03-2022 17:17:25:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Tue 29-03-2022 17:17:25:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Tue 29-03-2022 17:17:25:: USERINFO: Minimum number of pixels per island ..... : 14
+Tue 29-03-2022 17:17:27:: USERINFO: Number of islands found ................. : 1587
+Tue 29-03-2022 17:17:42:: USERINFO: Total number of Gaussians fit to image .. : 1742
+Tue 29-03-2022 17:17:42:: USERINFO: Total flux density in model ............. : 1.002 Jy
+Tue 29-03-2022 17:17:42:: USERINFO: --> Grouping Gaussians into sources
+Tue 29-03-2022 17:17:46:: USERINFO: Number of sources formed from Gaussians   : 1658
+Tue 29-03-2022 17:17:46:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #41 (x=98, y=953)
+                                        Island #130 (x=246, y=1999)
+                                        Island #219 (x=381, y=1246)
+                                        Island #297 (x=487, y=0)
+                                        Island #350 (x=569, y=1999)
+                                        Island #509 (x=775, y=1806)
+                                        Island #565 (x=847, y=1737)
+                                        Island #602 (x=901, y=1369)
+                                        Island #636 (x=941, y=1450)
+                                        Island #775 (x=1092, y=1309)
+                                        Island #828 (x=1153, y=841)
+                                        Island #900 (x=1227, y=1070)
+                                        Island #1090 (x=1489, y=561)
+                                        Island #1108 (x=1514, y=1256)
+                                        Island #1162 (x=1570, y=1776)
+                                        Island #1207 (x=1625, y=1999)
+                                        Island #1255 (x=1674, y=1698)
+                                        Island #1425 (x=1851, y=1678)
+                                        Island #1459 (x=1886, y=804)
+                                        Island #1538 (x=1962, y=1472)
+                                        Island #1583 (x=1999, y=1346)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Tue 29-03-2022 17:17:48:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Tue 29-03-2022 17:17:49:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/residual/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.resid_gaus.fits
+Tue 29-03-2022 17:17:49:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/model/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.model_gaus.fits
+Tue 29-03-2022 17:17:50:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: 2.451e-07 (Jy/beam)
+                                        std. dev: 3.739e-05 (Jy/beam)
+                                            skew: 51.989
+                                        kurtosis: 3667.079
+Tue 29-03-2022 17:17:51:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.sky_in
+Tue 29-03-2022 17:17:51:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.lsm
+Tue 29-03-2022 17:17:51:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul
+Tue 29-03-2022 17:17:52:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl
+Tue 29-03-2022 17:17:52:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.star
+Tue 29-03-2022 17:17:52:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.kvis.ann
+Tue 29-03-2022 17:17:52:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.ds9.reg
+Tue 29-03-2022 17:17:52:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.ds9.reg
+Tue 29-03-2022 17:17:53:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.FITS
+Tue 29-03-2022 17:17:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.FITS
+Tue 29-03-2022 17:17:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/misc/parameters_used
+Tue 29-03-2022 17:17:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.16.50/misc/parameters.sav
+Tue 29-03-2022 17:17:55:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 34.592500345925004
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (30, 10)
+                                        thresh               : 'hard'
+                                        trim_box             : [0, 2000, 0, 2000]
+Tue 29-03-2022 17:17:55:: INFO    : Writing Abell85_catalog_BDSF_output_rmsbox.reg
+
+========================================================================
+Tue 29-03-2022 17:20:30:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Tue 29-03-2022 17:20:30:: INFO    : PyBDSF version 1.9.1
+Tue 29-03-2022 17:20:30:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        output_all           = True
+                                        rms_box              = (30, 10)
+Tue 29-03-2022 17:20:30:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Tue 29-03-2022 17:20:30:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Tue 29-03-2022 17:20:30:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Tue 29-03-2022 17:20:33:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Tue 29-03-2022 17:20:33:: USERINFO: Number of channels ...................... : 12
+Tue 29-03-2022 17:20:33:: USERINFO: Number of Stokes parameters ............. : 1
+Tue 29-03-2022 17:20:33:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Tue 29-03-2022 17:20:33:: INFO    : Equinox of image is 2000.000000.
+Tue 29-03-2022 17:20:33:: INFO    : Overwriting output files (if any) in directory ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/
+Tue 29-03-2022 17:21:34:: USERINFO: --> Channels averaged with uniform weights
+Tue 29-03-2022 17:21:34:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Tue 29-03-2022 17:21:34:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Tue 29-03-2022 17:21:34:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Tue 29-03-2022 17:21:43:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Tue 29-03-2022 17:21:43:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Tue 29-03-2022 17:21:44:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Tue 29-03-2022 17:21:44:: INFO    : Estimated bmpersrc_th =   43.55
+Tue 29-03-2022 17:21:44:: INFO    : Parameter confused is False
+Tue 29-03-2022 17:21:44:: USERINFO: --> Calculating background rms and mean images
+Tue 29-03-2022 17:21:44:: INFO    : Estimated size of brightest source (pixels) = 5
+Tue 29-03-2022 17:21:44:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Tue 29-03-2022 17:22:22:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Tue 29-03-2022 17:22:22:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Tue 29-03-2022 17:22:57:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels
+Tue 29-03-2022 17:22:57:: INFO    : Background rms and mean images computed
+Tue 29-03-2022 17:22:58:: USERINFO: --> Variation in rms image significant
+Tue 29-03-2022 17:22:58:: USERINFO: --> Using 2D map for background rms
+Tue 29-03-2022 17:22:58:: USERINFO: --> Variation in mean image significant
+Tue 29-03-2022 17:22:58:: USERINFO: --> Using 2D map for background mean
+Tue 29-03-2022 17:22:58:: USERINFO: Min/max values of background rms map .... : (2.98e-06, 2.59e-03) Jy/beam
+Tue 29-03-2022 17:22:58:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 4.15e-03) Jy/beam
+Tue 29-03-2022 17:22:58:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.rmsd_I.fits
+Tue 29-03-2022 17:22:59:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.mean_I.fits
+Tue 29-03-2022 17:23:00:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.norm_I.fits
+Tue 29-03-2022 17:23:00:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Tue 29-03-2022 17:23:00:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Tue 29-03-2022 17:23:00:: USERINFO: Minimum number of pixels per island ..... : 14
+Tue 29-03-2022 17:23:06:: USERINFO: Number of islands found ................. : 4733
+Tue 29-03-2022 17:23:42:: USERINFO: Total number of Gaussians fit to image .. : 5141
+Tue 29-03-2022 17:23:42:: USERINFO: Total flux density in model ............. : 2.563 Jy
+Tue 29-03-2022 17:23:45:: USERINFO: --> Grouping Gaussians into sources
+Tue 29-03-2022 17:23:55:: USERINFO: Number of sources formed from Gaussians   : 4946
+Tue 29-03-2022 17:23:55:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #80 (x=98, y=953)
+                                        Island #268 (x=286, y=2553)
+                                        Island #359 (x=381, y=1246)
+                                        Island #433 (x=437, y=2169)
+                                        Island #492 (x=487, y=0)
+                                        Island #677 (x=632, y=2252)
+                                        Island #754 (x=690, y=3196)
+                                        Island #860 (x=775, y=1806)
+                                        Island #957 (x=847, y=1737)
+                                        Island #1034 (x=901, y=1369)
+                                        Island #1098 (x=941, y=1450)
+                                        Island #1113 (x=953, y=2919)
+                                        Island #1211 (x=1007, y=3070)
+                                        Island #1223 (x=1008, y=2874)
+                                        Island #1351 (x=1092, y=1309)
+                                        Island #1446 (x=1153, y=841)
+                                        Island #1571 (x=1227, y=1070)
+                                        Island #1816 (x=1402, y=3386)
+                                        Island #1900 (x=1458, y=2309)
+                                        Island #1945 (x=1489, y=561)
+                                        Island #1989 (x=1514, y=1256)
+                                        Island #1993 (x=1517, y=3431)
+                                        Island #2085 (x=1570, y=1776)
+                                        Island #2258 (x=1674, y=1698)
+                                        Island #2283 (x=1690, y=2805)
+                                        Island #2552 (x=1851, y=1678)
+                                        Island #2619 (x=1886, y=804)
+                                        Island #2681 (x=1919, y=2646)
+                                        Island #2750 (x=1962, y=1472)
+                                        Island #2874 (x=2036, y=1467)
+                                        Island #2924 (x=2064, y=1518)
+                                        Island #2927 (x=2069, y=1670)
+                                        Island #3002 (x=2127, y=997)
+                                        Island #3123 (x=2195, y=2533)
+                                        Island #3441 (x=2425, y=2423)
+                                        Island #3484 (x=2456, y=3616)
+                                        Island #3532 (x=2489, y=3265)
+                                        Island #3619 (x=2552, y=0)
+                                        Island #3796 (x=2694, y=1322)
+                                        Island #4026 (x=2866, y=2960)
+                                        Island #4339 (x=3145, y=1361)
+                                        Island #4383 (x=3187, y=2517)
+                                        Island #4512 (x=3328, y=1991)
+                                        Island #4604 (x=3428, y=2287)
+                                        Island #4729 (x=3616, y=3294)
+                                        Island #4731 (x=3616, y=210)
+                                        Island #4732 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Tue 29-03-2022 17:24:00:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Tue 29-03-2022 17:24:04:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/residual/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.resid_gaus.fits
+Tue 29-03-2022 17:24:04:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/model/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.model_gaus.fits
+Tue 29-03-2022 17:24:08:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: 1.120e-07 (Jy/beam)
+                                        std. dev: 5.105e-05 (Jy/beam)
+                                            skew: 89.362
+                                        kurtosis: 10556.617
+Tue 29-03-2022 17:24:13:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.sky_in
+Tue 29-03-2022 17:24:13:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.lsm
+Tue 29-03-2022 17:24:14:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul
+Tue 29-03-2022 17:24:16:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl
+Tue 29-03-2022 17:24:16:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.star
+Tue 29-03-2022 17:24:16:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.kvis.ann
+Tue 29-03-2022 17:24:16:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.ds9.reg
+Tue 29-03-2022 17:24:16:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.ds9.reg
+Tue 29-03-2022 17:24:18:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.FITS
+Tue 29-03-2022 17:24:19:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.FITS
+Tue 29-03-2022 17:24:19:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/misc/parameters_used
+Tue 29-03-2022 17:24:19:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/29Mar2022_17.20.33/misc/parameters.sav
+Tue 29-03-2022 17:24:23:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (30, 10)
+                                        thresh               : 'hard'
+Tue 29-03-2022 17:24:23:: INFO    : Writing Abell85_catalog_BDSF_output_rmsbox.reg
+
+========================================================================
+Wed 30-03-2022 17:42:29:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Wed 30-03-2022 17:42:29:: INFO    : PyBDSF version 1.9.1
+Wed 30-03-2022 17:42:29:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        output_all           = True
+                                        rms_box              = (30, 10)
+Wed 30-03-2022 17:42:29:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Wed 30-03-2022 17:42:29:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Wed 30-03-2022 17:42:29:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Wed 30-03-2022 17:42:33:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Wed 30-03-2022 17:42:33:: USERINFO: Number of channels ...................... : 12
+Wed 30-03-2022 17:42:33:: USERINFO: Number of Stokes parameters ............. : 1
+Wed 30-03-2022 17:42:33:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Wed 30-03-2022 17:42:33:: INFO    : Equinox of image is 2000.000000.
+Wed 30-03-2022 17:42:33:: INFO    : Overwriting output files (if any) in directory ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/
+Wed 30-03-2022 17:43:34:: USERINFO: --> Channels averaged with uniform weights
+Wed 30-03-2022 17:43:34:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Wed 30-03-2022 17:43:34:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Wed 30-03-2022 17:43:34:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Wed 30-03-2022 17:43:39:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Wed 30-03-2022 17:43:39:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Wed 30-03-2022 17:43:40:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Wed 30-03-2022 17:43:40:: INFO    : Estimated bmpersrc_th =   43.55
+Wed 30-03-2022 17:43:40:: INFO    : Parameter confused is False
+Wed 30-03-2022 17:43:40:: USERINFO: --> Calculating background rms and mean images
+Wed 30-03-2022 17:43:40:: INFO    : Estimated size of brightest source (pixels) = 5
+Wed 30-03-2022 17:43:40:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Wed 30-03-2022 17:44:17:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Wed 30-03-2022 17:44:17:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Wed 30-03-2022 17:44:54:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels
+Wed 30-03-2022 17:44:54:: INFO    : Background rms and mean images computed
+Wed 30-03-2022 17:44:54:: USERINFO: --> Variation in rms image significant
+Wed 30-03-2022 17:44:54:: USERINFO: --> Using 2D map for background rms
+Wed 30-03-2022 17:44:54:: USERINFO: --> Variation in mean image significant
+Wed 30-03-2022 17:44:54:: USERINFO: --> Using 2D map for background mean
+Wed 30-03-2022 17:44:54:: USERINFO: Min/max values of background rms map .... : (2.98e-06, 2.59e-03) Jy/beam
+Wed 30-03-2022 17:44:54:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 4.15e-03) Jy/beam
+Wed 30-03-2022 17:44:55:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.rmsd_I.fits
+Wed 30-03-2022 17:44:56:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.mean_I.fits
+Wed 30-03-2022 17:44:56:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.norm_I.fits
+Wed 30-03-2022 17:44:56:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Wed 30-03-2022 17:44:56:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Wed 30-03-2022 17:44:56:: USERINFO: Minimum number of pixels per island ..... : 14
+Wed 30-03-2022 17:45:02:: USERINFO: Number of islands found ................. : 4733
+Wed 30-03-2022 17:45:38:: USERINFO: Total number of Gaussians fit to image .. : 5141
+Wed 30-03-2022 17:45:38:: USERINFO: Total flux density in model ............. : 2.563 Jy
+Wed 30-03-2022 17:45:40:: USERINFO: --> Grouping Gaussians into sources
+Wed 30-03-2022 17:45:49:: USERINFO: Number of sources formed from Gaussians   : 4946
+Wed 30-03-2022 17:45:49:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #80 (x=98, y=953)
+                                        Island #268 (x=286, y=2553)
+                                        Island #359 (x=381, y=1246)
+                                        Island #433 (x=437, y=2169)
+                                        Island #492 (x=487, y=0)
+                                        Island #677 (x=632, y=2252)
+                                        Island #754 (x=690, y=3196)
+                                        Island #860 (x=775, y=1806)
+                                        Island #957 (x=847, y=1737)
+                                        Island #1034 (x=901, y=1369)
+                                        Island #1098 (x=941, y=1450)
+                                        Island #1113 (x=953, y=2919)
+                                        Island #1211 (x=1007, y=3070)
+                                        Island #1223 (x=1008, y=2874)
+                                        Island #1351 (x=1092, y=1309)
+                                        Island #1446 (x=1153, y=841)
+                                        Island #1571 (x=1227, y=1070)
+                                        Island #1816 (x=1402, y=3386)
+                                        Island #1900 (x=1458, y=2309)
+                                        Island #1945 (x=1489, y=561)
+                                        Island #1989 (x=1514, y=1256)
+                                        Island #1993 (x=1517, y=3431)
+                                        Island #2085 (x=1570, y=1776)
+                                        Island #2258 (x=1674, y=1698)
+                                        Island #2283 (x=1690, y=2805)
+                                        Island #2552 (x=1851, y=1678)
+                                        Island #2619 (x=1886, y=804)
+                                        Island #2681 (x=1919, y=2646)
+                                        Island #2750 (x=1962, y=1472)
+                                        Island #2874 (x=2036, y=1467)
+                                        Island #2924 (x=2064, y=1518)
+                                        Island #2927 (x=2069, y=1670)
+                                        Island #3002 (x=2127, y=997)
+                                        Island #3123 (x=2195, y=2533)
+                                        Island #3441 (x=2425, y=2423)
+                                        Island #3484 (x=2456, y=3616)
+                                        Island #3532 (x=2489, y=3265)
+                                        Island #3619 (x=2552, y=0)
+                                        Island #3796 (x=2694, y=1322)
+                                        Island #4026 (x=2866, y=2960)
+                                        Island #4339 (x=3145, y=1361)
+                                        Island #4383 (x=3187, y=2517)
+                                        Island #4512 (x=3328, y=1991)
+                                        Island #4604 (x=3428, y=2287)
+                                        Island #4729 (x=3616, y=3294)
+                                        Island #4731 (x=3616, y=210)
+                                        Island #4732 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Wed 30-03-2022 17:45:55:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Wed 30-03-2022 17:45:58:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/residual/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.resid_gaus.fits
+Wed 30-03-2022 17:45:59:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/model/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.model_gaus.fits
+Wed 30-03-2022 17:46:03:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: 1.120e-07 (Jy/beam)
+                                        std. dev: 5.105e-05 (Jy/beam)
+                                            skew: 89.362
+                                        kurtosis: 10556.617
+Wed 30-03-2022 17:46:08:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.sky_in
+Wed 30-03-2022 17:46:08:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.lsm
+Wed 30-03-2022 17:46:10:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul
+Wed 30-03-2022 17:46:11:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl
+Wed 30-03-2022 17:46:11:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.star
+Wed 30-03-2022 17:46:11:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.kvis.ann
+Wed 30-03-2022 17:46:12:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.ds9.reg
+Wed 30-03-2022 17:46:12:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.ds9.reg
+Wed 30-03-2022 17:46:14:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.FITS
+Wed 30-03-2022 17:46:15:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.FITS
+Wed 30-03-2022 17:46:15:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/misc/parameters_used
+Wed 30-03-2022 17:46:15:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.42.34/misc/parameters.sav
+Wed 30-03-2022 17:46:20:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (30, 10)
+                                        thresh               : 'hard'
+Wed 30-03-2022 17:46:20:: INFO    : Writing Abell85_catalog_BDSF.reg
+
+========================================================================
+Wed 30-03-2022 17:47:23:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Wed 30-03-2022 17:47:23:: INFO    : PyBDSF version 1.9.1
+Wed 30-03-2022 17:47:23:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        output_all           = True
+                                        rms_box              = (30, 10)
+Wed 30-03-2022 17:47:23:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Wed 30-03-2022 17:47:23:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Wed 30-03-2022 17:47:23:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Wed 30-03-2022 17:47:26:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Wed 30-03-2022 17:47:26:: USERINFO: Number of channels ...................... : 12
+Wed 30-03-2022 17:47:26:: USERINFO: Number of Stokes parameters ............. : 1
+Wed 30-03-2022 17:47:26:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Wed 30-03-2022 17:47:26:: INFO    : Equinox of image is 2000.000000.
+Wed 30-03-2022 17:47:26:: INFO    : Overwriting output files (if any) in directory ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/
+Wed 30-03-2022 17:48:20:: USERINFO: --> Channels averaged with uniform weights
+Wed 30-03-2022 17:48:20:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Wed 30-03-2022 17:48:20:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Wed 30-03-2022 17:48:21:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Wed 30-03-2022 17:48:26:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Wed 30-03-2022 17:48:26:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Wed 30-03-2022 17:48:26:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Wed 30-03-2022 17:48:27:: INFO    : Estimated bmpersrc_th =   43.55
+Wed 30-03-2022 17:48:27:: INFO    : Parameter confused is False
+Wed 30-03-2022 17:48:27:: USERINFO: --> Calculating background rms and mean images
+Wed 30-03-2022 17:48:27:: INFO    : Estimated size of brightest source (pixels) = 5
+Wed 30-03-2022 17:48:27:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Wed 30-03-2022 17:49:05:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Wed 30-03-2022 17:49:05:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Wed 30-03-2022 17:49:41:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels
+Wed 30-03-2022 17:49:41:: INFO    : Background rms and mean images computed
+Wed 30-03-2022 17:49:41:: USERINFO: --> Variation in rms image significant
+Wed 30-03-2022 17:49:41:: USERINFO: --> Using 2D map for background rms
+Wed 30-03-2022 17:49:41:: USERINFO: --> Variation in mean image significant
+Wed 30-03-2022 17:49:41:: USERINFO: --> Using 2D map for background mean
+Wed 30-03-2022 17:49:41:: USERINFO: Min/max values of background rms map .... : (2.98e-06, 2.59e-03) Jy/beam
+Wed 30-03-2022 17:49:41:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 4.15e-03) Jy/beam
+Wed 30-03-2022 17:49:42:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.rmsd_I.fits
+Wed 30-03-2022 17:49:42:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.mean_I.fits
+Wed 30-03-2022 17:49:43:: INFO    : Writing  ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/background/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.norm_I.fits
+Wed 30-03-2022 17:49:43:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Wed 30-03-2022 17:49:43:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Wed 30-03-2022 17:49:43:: USERINFO: Minimum number of pixels per island ..... : 14
+Wed 30-03-2022 17:49:49:: USERINFO: Number of islands found ................. : 4733
+Wed 30-03-2022 17:50:25:: USERINFO: Total number of Gaussians fit to image .. : 5141
+Wed 30-03-2022 17:50:25:: USERINFO: Total flux density in model ............. : 2.563 Jy
+Wed 30-03-2022 17:50:27:: USERINFO: --> Grouping Gaussians into sources
+Wed 30-03-2022 17:50:35:: USERINFO: Number of sources formed from Gaussians   : 4946
+Wed 30-03-2022 17:50:35:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #80 (x=98, y=953)
+                                        Island #268 (x=286, y=2553)
+                                        Island #359 (x=381, y=1246)
+                                        Island #433 (x=437, y=2169)
+                                        Island #492 (x=487, y=0)
+                                        Island #677 (x=632, y=2252)
+                                        Island #754 (x=690, y=3196)
+                                        Island #860 (x=775, y=1806)
+                                        Island #957 (x=847, y=1737)
+                                        Island #1034 (x=901, y=1369)
+                                        Island #1098 (x=941, y=1450)
+                                        Island #1113 (x=953, y=2919)
+                                        Island #1211 (x=1007, y=3070)
+                                        Island #1223 (x=1008, y=2874)
+                                        Island #1351 (x=1092, y=1309)
+                                        Island #1446 (x=1153, y=841)
+                                        Island #1571 (x=1227, y=1070)
+                                        Island #1816 (x=1402, y=3386)
+                                        Island #1900 (x=1458, y=2309)
+                                        Island #1945 (x=1489, y=561)
+                                        Island #1989 (x=1514, y=1256)
+                                        Island #1993 (x=1517, y=3431)
+                                        Island #2085 (x=1570, y=1776)
+                                        Island #2258 (x=1674, y=1698)
+                                        Island #2283 (x=1690, y=2805)
+                                        Island #2552 (x=1851, y=1678)
+                                        Island #2619 (x=1886, y=804)
+                                        Island #2681 (x=1919, y=2646)
+                                        Island #2750 (x=1962, y=1472)
+                                        Island #2874 (x=2036, y=1467)
+                                        Island #2924 (x=2064, y=1518)
+                                        Island #2927 (x=2069, y=1670)
+                                        Island #3002 (x=2127, y=997)
+                                        Island #3123 (x=2195, y=2533)
+                                        Island #3441 (x=2425, y=2423)
+                                        Island #3484 (x=2456, y=3616)
+                                        Island #3532 (x=2489, y=3265)
+                                        Island #3619 (x=2552, y=0)
+                                        Island #3796 (x=2694, y=1322)
+                                        Island #4026 (x=2866, y=2960)
+                                        Island #4339 (x=3145, y=1361)
+                                        Island #4383 (x=3187, y=2517)
+                                        Island #4512 (x=3328, y=1991)
+                                        Island #4604 (x=3428, y=2287)
+                                        Island #4729 (x=3616, y=3294)
+                                        Island #4731 (x=3616, y=210)
+                                        Island #4732 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Wed 30-03-2022 17:50:39:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Wed 30-03-2022 17:50:42:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/residual/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.resid_gaus.fits
+Wed 30-03-2022 17:50:43:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/model/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.model_gaus.fits
+Wed 30-03-2022 17:50:48:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: 1.120e-07 (Jy/beam)
+                                        std. dev: 5.105e-05 (Jy/beam)
+                                            skew: 89.362
+                                        kurtosis: 10556.617
+Wed 30-03-2022 17:50:51:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.sky_in
+Wed 30-03-2022 17:50:51:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.lsm
+Wed 30-03-2022 17:50:52:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul
+Wed 30-03-2022 17:50:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl
+Wed 30-03-2022 17:50:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.star
+Wed 30-03-2022 17:50:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.kvis.ann
+Wed 30-03-2022 17:50:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.ds9.reg
+Wed 30-03-2022 17:50:54:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.ds9.reg
+Wed 30-03-2022 17:50:56:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.gaul.FITS
+Wed 30-03-2022 17:50:57:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/catalogues/Abell_85_aFix_pol_I_Farcsec_fcube_cor.pybdsm.srl.FITS
+Wed 30-03-2022 17:50:57:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/misc/parameters_used
+Wed 30-03-2022 17:50:57:: INFO    : Writing ./Abell_85_aFix_pol_I_Farcsec_fcube_cor_pybdsm/30Mar2022_17.47.26/misc/parameters.sav
+Wed 30-03-2022 17:50:59:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (30, 10)
+                                        thresh               : 'hard'
+Wed 30-03-2022 17:50:59:: INFO    : Writing Abell85_catalog_BDSF.reg
+Wed 30-03-2022 17:51:01:: INFO    : Writing Abell85_catalog_BDSF_rsl.fits
