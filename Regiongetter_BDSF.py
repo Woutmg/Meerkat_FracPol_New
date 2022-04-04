@@ -28,9 +28,11 @@ import bdsf
 
 '''WITH MULTIPLE FREQS:'''
 directory_univ_mkt = r'/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/'
-img_2 = bdsf.process_image('Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits', rms_box=(30, 10), use_scipy_fft=True, output_all = True)
-img_2.write_catalog(outfile=r'Abell85_catalog_BDSF.reg', catalog_type='gaul', format='ds9', clobber='True') #srl toevegen
-img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_rsl.fits', catalog_type='srl', format='fits', clobber='True') #srl toevegen
+img_2 = bdsf.process_image('Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits', rms_box=(30, 10), use_scipy_fft=True)
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_gaul.fits', catalog_type='gaul', format='fits', clobber='True')
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_gaul.reg', catalog_type='gaul', format='ds9', clobber='True')
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_rsl.fits', catalog_type='srl', format='fits', clobber='True')
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_rsl.reg', catalog_type='srl', format='ds9', clobber='True')
 
 img_2.export_image(outfile=r'Abell85_ch0_BDSF.fits', img_type='ch0', clobber='True')
 img_2.export_image(outfile=r'Abell85_rms_BDSF.fits', img_type='rms', clobber='True')

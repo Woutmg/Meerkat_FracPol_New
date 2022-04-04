@@ -1,0 +1,10 @@
+2022-03-31 13:57:54	INFO	::casa	
+2022-03-31 13:57:54	INFO	::casa	Checking telemetry submission interval
+2022-03-31 13:57:54	INFO	::casa	Creating a new telemetry time stamp file./home/goesaert/.casa/telemetry-3207c1983602e03e4.stamp
+2022-03-31 13:57:54	INFO	::casa	Telemetry submit interval not reached. Not submitting data.
+2022-03-31 13:57:54	INFO	::casa	Next telemetry data submission in: 6 days, 23:59:59.997851
+2022-03-31 13:57:54	INFO	::casa	CASA Version  5.7.0-134  
+2022-03-31 13:58:03	INFO	::casa	
+2022-03-31 14:30:45	INFO	imsmooth::utils::verify	Verifying arguments....File existence checking failed for imagename 
+2022-03-31 14:30:45	WARN	imsmooth::utils::verify	Argument imagename failed to verify.
+2022-03-31 14:30:45	SEVERE	imsmooth::::	An error occurred running task imsmooth.
