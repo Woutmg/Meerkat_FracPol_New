@@ -1,0 +1,7 @@
+2022-04-04 15:49:52	INFO	::casa	
+2022-04-04 15:49:52	INFO	::casa	Checking telemetry submission interval
+2022-04-04 15:49:52	INFO	::casa	Creating a new telemetry time stamp file./home/goesaert/.casa/telemetry-2c020c3f83543102d4.stamp
+2022-04-04 15:49:52	INFO	::casa	Telemetry submit interval not reached. Not submitting data.
+2022-04-04 15:49:52	INFO	::casa	Next telemetry data submission in: 6 days, 23:59:59.997648
+2022-04-04 15:49:52	INFO	::casa	CASA Version  5.7.0-134  
+2022-04-04 15:50:04	INFO	::casa	

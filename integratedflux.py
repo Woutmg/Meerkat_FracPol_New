@@ -107,6 +107,7 @@ def mask_regions(fitsimage,ds9region,outfilename,maskoutside=True):
             hdu[0].data[0][0][manualmask == True] = 0.0
         else:
             # Mask everything IN the region. i.e., mask = 1 in the region
+            print(hdu[0].data[0][0][manualmask == False])
             hdu[0].data[0][0][manualmask == False] = 0.0
             hdu[0].data[0][0][manualmask == True] = 1.0
 
