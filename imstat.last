@@ -1,0 +1,22 @@
+taskname           = "imstat"
+imagename          =  "/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/I_slices/Abell_85_I_plane_freq12.fits"
+axes               =  -1
+region             =  ""
+box                =  "1608,1608,1608,1608"
+chans              =  ""
+stokes             =  ""
+listit             =  True
+verbose            =  True
+mask               =  ""
+stretch            =  False
+logfile            =  ""
+append             =  True
+algorithm          =  "hinges-fences"
+fence              =  1.0
+center             =  "mean"
+lside              =  True
+zscore             =  -1
+maxiter            =  -1
+clmethod           =  "auto"
+niter              =  3
+#imstat(imagename="/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/I_slices/Abell_85_I_plane_freq12.fits",axes=-1,region="",box="1608,1608,1608,1608",chans="",stokes="",listit=True,verbose=True,mask="",stretch=False,logfile="",append=True,algorithm="hinges-fences",fence=1.0,center="mean",lside=True,zscore=-1,maxiter=-1,clmethod="auto",niter=3)
