@@ -142,9 +142,9 @@ def plot_rms_vs_spw(title, savefig):
             imagesU = []
 
         imnameQ = ('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/Q_slices/'
-                  +'Abell_85_Q_plane_freq'+str(channum+1)+'.fits')
+                  +'Abell_85_Q_plane_freq'+(2-len(str((channum+1))))*'0'+str(channum+1)+'.fits')
         imnameU = ('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/U_slices/'
-                  +'Abell_85_U_plane_freq'+str(channum+1)+'.fits')
+                  +'Abell_85_U_plane_freq'+(2-len(str((channum+1))))*'0'+str(channum+1)+'.fits')
         imagesQ.append(imnameQ)
         imagesU.append(imnameU)
 
@@ -197,14 +197,12 @@ def plot_rms_vs_channel(title, savefig):
     algorithm = 'hinges-fences'
 
     for channum in tqdm.tqdm(range(0,nchan),desc='Calculating rms per channel'):
-        print(channum)
-        rmsQ = imstat('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/Q_slices/Abell_85_Q_plane_freq'+str(channum+1)+'.fits'
-                                ,algorithm=algorithm,fence=1.0,box=box)['rms'][0]
-        rmsU = imstat('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/U_slices/Abell_85_U_plane_freq'+str(channum+1)+'.fits'
-                                ,algorithm=algorithm,fence=1.0,box=box)['rms'][0]
-        rmsI = imstat('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/I_slices/Abell_85_I_plane_freq'+str(channum+1)+'.fits'
-                                ,algorithm=algorithm,fence=1.0,box=box)['rms'][0]
-
+        rmsQ = imstat('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/Q_slices/Abell_85_Q_plane_freq'+(2-len(str((channum+1))))*'0'\
+                      +str(channum+1)+'.fits',algorithm=algorithm,fence=1.0,box=box)['rms'][0]
+        rmsU = imstat('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/U_slices/Abell_85_U_plane_freq'+(2-len(str((channum+1))))*'0'\
+                      +str(channum+1)+'.fits',algorithm=algorithm,fence=1.0,box=box)['rms'][0]
+        rmsI = imstat('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/I_slices/Abell_85_I_plane_freq'+(2-len(str((channum+1))))*'0'\
+                      +str(channum+1)+'.fits',algorithm=algorithm,fence=1.0,box=box)['rms'][0]
 
         all_noiseQ[channum] = rmsQ
         all_noiseU[channum] = rmsU
@@ -290,9 +288,9 @@ def fix_rmsynth_polint_header():
 def create_parameterfile():
     
     # Open any image to get the image size
-    img = glob.glob('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/I_slices/Abell_85_I_plane_freq1.fits')[0]
+    img = glob.glob('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/I_slices/Abell_85_I_plane_freq01.fits')[0]
     with fits.open(img) as hdul:
-        size = hdul[0].data.shape[1]
+        size = hdul[0].data[0][0].shape[1]
 
     with open(rmsynthpath+'rmsynth.par','w') as file:
         # This is a comment
@@ -358,7 +356,7 @@ def create_parameterfile():
 
         file.write(r'% directory where the input fits file can be found')
         file.write('\n')
-        file.write('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/')
+        file.write('input_dir /net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/')
         file.write('\n')
 
 def cleanup_rmsynth():
@@ -414,6 +412,7 @@ if __name__ == '__main__':
     # Create rmsynth.par file in ./{directory}/{sourcename}/rmsynth/rmsynth.par
     create_parameterfile()
 
+    create_inverse_variance_weights()
     # -p for plotting the RMTF as soon as its computed
     # runrmsynth = "python /net/bovenrijn/data1/digennaro/software/pyrmsynth/rmsynthesis.py -s -p "
     runrmsynth = "python /net/vdesk/data2/GoesaertW/Data_Analyis_Git/rmsynthesis.py -s "

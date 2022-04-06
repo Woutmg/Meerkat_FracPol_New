@@ -41,9 +41,10 @@ import sys
 import numpy
 import pyfits
 import pylab
-from pywcs import WCS
 
 import rm_tools as R
+from pywcs import WCS
+
 
 VERSION = '1.3.0'
 
@@ -156,8 +157,8 @@ def rmsynthesis(params, options, manual=False):
     if manual=true returns the rmsynth cube class and the pol cube.
     """
 
-    qsubdir = '/stokes_q/'
-    usubdir = '/stokes_u/'
+    qsubdir = 'Q_slices/'
+    usubdir = 'U_slices/'
 
     vcube_mmfn = 'stokesv.dat'
     incube_mmfn = 'incube.dat'
@@ -221,6 +222,7 @@ def rmsynthesis(params, options, manual=False):
         try:
             fns_q = os.listdir(params.input_dir + qsubdir)
             fns_u = os.listdir(params.input_dir + usubdir)
+
         except OSError:
             print "No Stokes sub-directories found!  Please put the Stokes " +\
                 "Q and Stokes U images into the stokes_q and stokes_u " + \
@@ -255,10 +257,11 @@ def rmsynthesis(params, options, manual=False):
 
         tdata = pyfits.getdata(params.input_dir + qsubdir + fns_q[0])
         thead = pyfits.getheader(params.input_dir + qsubdir + fns_q[0])
-
+        
     # indices 1=freq, 2=dec, 3=ra - stored values are complex
 
     # Validate the image bounds
+    print(numpy.shape(tdata))
     decsz = [0, len(tdata[0, 0])]
     if params.dec_lim[0] != -1:
         decsz[0] = params.dec_lim[0]
@@ -569,7 +572,7 @@ def rmsynthesis(params, options, manual=False):
     rmsfout[:, 0] = rms.rmsf_phi
     rmsfout[:, 1] = rms.rmsf.real
     rmsfout[:, 2] = rms.rmsf.imag
-    numpy.savetxt('/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/rmsynth/' + params.outputfn + '_rmsf.txt', rmsfout)
+    numpy.savetxt(params.outputfn + '_rmsf.txt', rmsfout)
 
     if options.stokes_v:
         print 'Writing Stokes V cube...'
@@ -1017,7 +1020,7 @@ def parse_input_file(infile):
     for row in reader:
         if len(row) != 0 and row[0] != '%':
             parset[row[0]] = row[1]
-
+            
     params.cutoff = float(parset['cutoff'])
     params.dec_lim = [int(parset['dec_min']), int(parset['dec_max'])]
     params.ra_lim = [int(parset['ra_min']), int(parset['ra_max'])]
