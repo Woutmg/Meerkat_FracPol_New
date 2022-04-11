@@ -87,26 +87,7 @@ def convert_units(data, fitsimage):
 
     if type(fitsimage) == str:
         with fits.open(fitsimage) as hdul:
-            header = hdul[0].header 
-            if header['BUNIT']=='JY/BEAM' or header['BUNIT']=='Jy/beam':
-                # BEAM AND PIXEL INFORMATION
-                bmaj      = header['BMIN']*u.deg
-                bmin      = header['BMAJ']*u.deg
-                bpa       = header['BPA']*u.deg
-                pix_size  = abs(header['CDELT2'])*u.deg # assume square pix size
-
-                beammaj = bmaj/(2.*(2.*np.log(2.))**0.5) # Convert to sigma
-                beammin = bmin/(2.*(2.*np.log(2.))**0.5) # Convert to sigma
-                pix_area  = abs(header['CDELT1']*header['CDELT2'])*u.deg*u.deg
-                beam_area = 2.*np.pi*1.0*beammaj*beammin # beam area in 
-                beam2pix  = beam_area/pix_area # beam area in pixels
-            else:
-                raise ValueError("UNITS ARE NOT Jy/beam PLEASE CHECK HEADER.")
-    else:
-        hdul = fitsimage
-        header = hdul[0].header 
-        if header['BUNIT']=='JY/BEAM' or header['BUNIT']=='Jy/beam':
-            # BEAM AND PIXEL INFORMATION
+            header = hdul.header 
             bmaj      = header['BMIN']*u.deg
             bmin      = header['BMAJ']*u.deg
             bpa       = header['BPA']*u.deg
@@ -117,13 +98,30 @@ def convert_units(data, fitsimage):
             pix_area  = abs(header['CDELT1']*header['CDELT2'])*u.deg*u.deg
             beam_area = 2.*np.pi*1.0*beammaj*beammin # beam area in 
             beam2pix  = beam_area/pix_area # beam area in pixels
-        else:
-            raise ValueError("UNITS ARE NOT Jy/beam PLEASE CHECK HEADER.")
+            
+            # Assuming input unit Jy/Beam
+    else:
+        hdul = fitsimage
+        header = hdul.header
 
+        # BEAM AND PIXEL INFORMATION
+        bmaj      = header['BMIN']*u.deg
+        bmin      = header['BMAJ']*u.deg
+        bpa       = header['BPA']*u.deg
+        pix_size  = abs(header['CDELT2'])*u.deg # assume square pix size
+
+        beammaj = bmaj/(2.*(2.*np.log(2.))**0.5) # Convert to sigma
+        beammin = bmin/(2.*(2.*np.log(2.))**0.5) # Convert to sigma
+        pix_area  = abs(header['CDELT1']*header['CDELT2'])*u.deg*u.deg
+        beam_area = 2.*np.pi*1.0*beammaj*beammin # beam area in 
+        beam2pix  = beam_area/pix_area # beam area in pixels
+           
+        # Assuming input unit Jy/Beam
+        
     data = data/beam2pix # convert to Jy/pix
     return data
      
-def integratedflux(fitsimage, ds9region, i, hdul=None, test=False):
+def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, linpolselect=False):
     """
     Given a 2D image in Jy/beam, with a .ds9 regionfile indicating the sources
     and a .fits table with the PyBDSF source parameters (RA,DEC,MAJ,MIN)
@@ -139,16 +137,20 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False):
     RETURNS
     totalflux  -- float  -- the integrated flux of the source in Jy
     Nbeams     -- float  -- the number of beams the source covers
-    """
-
-    if hdul is None:
+    """    
+    if hdul==None:
         closehdul = True
         hdul = fits.open(fitsimage)
     else:
         closehdul = False
 
-    head = hdul[0].header
-    data = hdul[0].data 
+    
+    head = hdul.header
+    if linpolselect==False:
+        data = hdul.data
+    else:
+        hdul = fits.open(fitsimage)
+        data = hdul[0].data
     w  = wcs.WCS(head)
 
     if type(ds9region) == str:
@@ -171,8 +173,8 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False):
         plt.show()
 
     # Now convert the units from Jy/beam to Jy/pix
-    masked_data = convert_units(masked_data, hdul)
-
+    if linpolselect==False:
+        masked_data = convert_units(masked_data, hdul)
 
     # The total flux of the source is then the sum of the pixels
     totalflux = masked_data.sum()
@@ -197,11 +199,14 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False):
     Nbeams = (Npix/beam2pix).value
     
     if closehdul: hdul.close()
-
-    return totalflux.value, Nbeams # flux given in Jy
-
+    
+    if linpolselect:
+        return totalflux, Nbeams # flux not given in Jy
+    else:
+        return totalflux.value, Nbeams # flux given in Jy
+    
 def uncertainty_flux(fitsimage, flux, Nbeams, regionfile_rms=None, rms=None, delta_cal=0.1, hdul=None
-    ,verbose=True):
+    ,verbose=False):
     """
     Calculate the uncertainty on the integrated flux.
 
@@ -235,8 +240,8 @@ def uncertainty_flux(fitsimage, flux, Nbeams, regionfile_rms=None, rms=None, del
     else:
         closehdul = False
 
-    header = hdul[0].header
-    data = hdul[0].data
+    header = hdul.header
+    data = hdul.data
     w  = wcs.WCS(header)
 
     if rms is None:
