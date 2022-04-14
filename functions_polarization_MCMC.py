@@ -11,7 +11,7 @@ import sys
 
 
 def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
-  , err_fluxU, rm, x, y, cornerplot,curvature,sourcenum=None,plotdir='/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85',depol='ExtDepol',overdispersed_start=False):
+  , err_fluxU, rm, x, y, cornerplot,curvature,sourcenum=None,plotdir='/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/',depol='ExtDepol',overdispersed_start=False):
   """
   ERIK ADDED: i: source number, plotdir='', where to put the cornerplot
   ERIK ADDED: check NaN values. Return NaN
@@ -441,6 +441,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
         , show_titles=False, title_kwargs={"fontsize": 14}
         , quantiles=[0.16, 0.5, 0.84]
         , range=lims)
+
         ch = plotdir[:-8]+'chain_source_%i_QU%s.npy'%(sourcenum,odstr)
         print ("Saving chain to %s"%ch)
         numpy.save(ch, samples)
