@@ -21,7 +21,10 @@ def models(depol, x, norm, a, curv, p0, X0, RM, sigma, obs_i, err_i, obs_q, err_
   mod_i = norm * freq**(a + curv*np.log10(freq))
   
   if len(x) == len(obs_i):
-    dof = len(x)-2
+    if curv == 0.0:
+        dof = len(x)-2
+    else:
+        dof = len(x)-3
     chisqred_i = (sum( ((obs_i - mod_i)/err_i)**2 ))/dof
   else:
     chisqred_i = None
@@ -55,7 +58,7 @@ def models(depol, x, norm, a, curv, p0, X0, RM, sigma, obs_i, err_i, obs_q, err_
 
 
 
-def plots(depol, imagename, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u, y_X=None, err_X=None, y_p=None, err_p=None, xlim=[0.005, 0.06], imgformat="pdf",saveplot=True):
+def plots(depol, imagename, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u, y_X, err_X, y_p, err_p, xlim=[0.005, 0.06], imgformat="pdf",saveplot=True):
   
   def freq_to_lambda(freq):
     wave_sq = (3.e8/freq)**2
@@ -119,7 +122,7 @@ def plots(depol, imagename, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err
   fit_i = models(depol, x, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[0]
   fit_q = models(depol, x, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[1]
   fit_u = models(depol, x, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[2]
-
+    
   chisqred_i  = models(depol, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[3]
   chisqred_qu = models(depol, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[4]
 
@@ -239,15 +242,15 @@ def plots(depol, imagename, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err
   err_p[idx] = None
   y_p[idx] = None
  
-#  ax1.errorbar(x_lambda, y_X, yerr=err_X, fmt='o', color='k', mfc='none', markersize=6, elinewidth=1.)
-#  ax2.errorbar(x_lambda, y_p, yerr=err_p, fmt='o', color='k', mfc='none', markersize=6, elinewidth=1.)
+  ax1.errorbar(x_lambda, y_X, yerr=err_X, fmt='o', color='k', mfc='none', markersize=6, elinewidth=1.)
+  ax2.errorbar(x_lambda, y_p, yerr=err_p, fmt='o', color='k', mfc='none', markersize=6, elinewidth=1.)
 
   # plot overlay models
   fit_X = models(depol, x, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[5]
   fit_p = models(depol, x, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[6]
   
-#  ax1.plot(x, fit_X,'-',color='royalblue',linewidth=5., zorder=len(y_X)+1,label=r"$\rm RM=$"+str("%.2f" % RM+"rad m$^{-2}$"))
-#  ax2.plot(x, fit_p,'-',color='royalblue',linewidth=5.,zorder=len(y_p)+1)
+  ax1.scatter(x, fit_X)#,'-',color='royalblue',linewidth=5., zorder=len(y_X)+1,label=r"$\rm RM=$"+str("%.2f" % RM+"rad m$^{-2}$"))
+  ax2.plot(x, fit_p,'-',color='royalblue',linewidth=5.,zorder=len(y_p)+1)
   
   # print res
   ax1res = fig.add_subplot(gs[1],sharex = ax1)
@@ -282,14 +285,14 @@ def plots(depol, imagename, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err
   model_X = models(depol, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[5]
   model_p = models(depol, x_lambda, norm, a, curv, p0, X0, RM, sigma, y_i, err_i, y_q, err_q, y_u, err_u)[6]
 
-#  y_X[np.where(y_X >= model_X + np.pi/2.)] -= np.pi
-#  y_X[np.where(y_X <= model_X - np.pi/2.)] += np.pi
+  y_X[np.where(y_X >= model_X + np.pi/2.)] -= np.pi
+  y_X[np.where(y_X <= model_X - np.pi/2.)] += np.pi
   
   
-#  ax1res.errorbar(x_lambda, y_X - model_X, yerr=err_X,fmt='.',markersize=4,color='k',alpha=0.75)
-#  ax1res.plot(x,[0]*1000,'--',color='royalblue',linewidth=2.5, zorder=len(y_X)+1)
-#  ax2res.errorbar(x_lambda, y_p - model_p,yerr=err_p,fmt='.',markersize=4,color='k',alpha=0.75)
-#  ax2res.plot(x,[0]*1000,'--',color='royalblue',linewidth=2.5, zorder=len(y_p)+1)
+  ax1res.errorbar(x_lambda, y_X - model_X, yerr=err_X,fmt='.',markersize=4,color='k',alpha=0.75)
+  ax1res.plot(x,[0]*1000,'--',color='royalblue',linewidth=2.5, zorder=len(y_X)+1)
+  ax2res.errorbar(x_lambda, y_p - model_p,yerr=err_p,fmt='.',markersize=4,color='k',alpha=0.75)
+  ax2res.plot(x,[0]*1000,'--',color='royalblue',linewidth=2.5, zorder=len(y_p)+1)
   
   plt.tight_layout()
   
