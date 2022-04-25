@@ -26,10 +26,9 @@ import bdsf
 #img.export_image(outfile=r'Abell85_gaus_model_BDSF_freqmean.fits', img_type='gaus_model', clobber='True')
 #img.export_image(outfile=r'Abell85_gaus_resid_BDSF_freqmean.fits', img_type='gaus_resid', clobber='True')
 
-'''WITH MULTIPLE FREQS:'''
-'''
+'''WITH MULTIPLE FREQS and no adaptive rms box:'''
 directory_univ_mkt = r'/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/'
-img_2 = bdsf.process_image('Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits', rms_box=(30, 10), use_scipy_fft=True)
+img_2 = bdsf.process_image('Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits', rms_box=(30,10), use_scipy_fft=True)
 img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_gaul.fits', catalog_type='gaul', format='fits', clobber='True')
 img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_gaul.reg', catalog_type='gaul', format='ds9', clobber='True')
 img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_rsl.fits', catalog_type='srl', format='fits', clobber='True')
@@ -40,7 +39,21 @@ img_2.export_image(outfile=r'Abell85_rms_BDSF.fits', img_type='rms', clobber='Tr
 img_2.export_image(outfile=r'Abell85_mean_BDSF.fits', img_type='mean', clobber='True')
 img_2.export_image(outfile=r'Abell85_gaus_model_BDSF.fits', img_type='gaus_model', clobber='True')
 img_2.export_image(outfile=r'Abell85_gaus_resid_BDSF.fits', img_type='gaus_resid', clobber='True')
-'''
+
+'''WITH MULTIPLE FREQS and adaptive rms box:'''
+directory_univ_mkt = r'/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/'
+img_2 = bdsf.process_image('Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits', rms_box=(100, 30), adaptive_rms_box=True, rms_box_bright=(30, 10), use_scipy_fft=True)
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_adapbox_gaul.fits', catalog_type='gaul', format='fits', clobber='True')
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_adapbox_gaul.reg', catalog_type='gaul', format='ds9', clobber='True')
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_adapbox_rsl.fits', catalog_type='srl', format='fits', clobber='True')
+img_2.write_catalog(outfile=r'Abell85_catalog_BDSF_adapbox_rsl.reg', catalog_type='srl', format='ds9', clobber='True')
+
+img_2.export_image(outfile=r'Abell85_ch0_BDSF_adapbox.fits', img_type='ch0', clobber='True')
+img_2.export_image(outfile=r'Abell85_rms_BDSF_adapbox.fits', img_type='rms', clobber='True')
+img_2.export_image(outfile=r'Abell85_mean_BDSF_adapbox.fits', img_type='mean', clobber='True')
+img_2.export_image(outfile=r'Abell85_gaus_model_BDSF_adapbox.fits', img_type='gaus_model', clobber='True')
+img_2.export_image(outfile=r'Abell85_gaus_resid_BDSF_adapbox.fits', img_type='gaus_resid', clobber='True')
+
 
 '''WITH LINPOL:'''
 '''
@@ -59,6 +72,7 @@ img_2.export_image(outfile=r'Abell85_Linpol_gaus_resid_BDSF.fits', img_type='gau
 '''
 
 '''WITH Convolve trick:'''
+'''
 directory_univ_mkt = r'/net/vdesk/data2/GoesaertW/Meerkat_Data/Abell_85/'
 img_2 = bdsf.process_image(directory_univ_mkt+'Abell_85_Fits_Data_Mean_Std.fits', frequency=1230917968, use_scipy_fft=True)
 img_2.write_catalog(outfile=r'Abell85_Linpol_catalog_BDSF_gaul.fits', catalog_type='gaul', format='fits', clobber='True')
@@ -71,3 +85,4 @@ img_2.export_image(outfile=r'Abell85_Conv_rms_BDSF.fits', img_type='rms', clobbe
 img_2.export_image(outfile=r'Abell85_Conv_mean_BDSF.fits', img_type='mean', clobber='True')
 img_2.export_image(outfile=r'Abell85_Conv_gaus_model_BDSF.fits', img_type='gaus_model', clobber='True')
 img_2.export_image(outfile=r'Abell85_Conv_gaus_resid_BDSF.fits', img_type='gaus_resid', clobber='True')
+'''

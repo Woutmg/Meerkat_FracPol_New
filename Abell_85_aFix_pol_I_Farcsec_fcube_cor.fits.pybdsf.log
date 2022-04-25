@@ -1083,3 +1083,1071 @@ Mon 04-04-2022 14:50:30:: USERINFO: Beam shape (major, minor, pos angle) .... : 
 Mon 04-04-2022 14:50:30:: INFO    : Equinox of image is 2000.000000.
 Mon 04-04-2022 14:50:30:: USERINFO: 
                                     --> Aborted
+
+========================================================================
+Thu 21-04-2022 18:38:30:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Thu 21-04-2022 18:38:30:: INFO    : PyBDSF version 1.9.1
+Thu 21-04-2022 18:38:30:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        rms_box              = (30, 10)
+Thu 21-04-2022 18:38:30:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Thu 21-04-2022 18:38:30:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Thu 21-04-2022 18:38:30:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Thu 21-04-2022 18:38:33:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Thu 21-04-2022 18:38:33:: USERINFO: Number of channels ...................... : 12
+Thu 21-04-2022 18:38:33:: USERINFO: Number of Stokes parameters ............. : 1
+Thu 21-04-2022 18:38:33:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Thu 21-04-2022 18:38:33:: INFO    : Equinox of image is 2000.000000.
+Thu 21-04-2022 18:39:24:: USERINFO: --> Channels averaged with uniform weights
+Thu 21-04-2022 18:39:24:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Thu 21-04-2022 18:39:24:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Thu 21-04-2022 18:39:24:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Thu 21-04-2022 18:39:29:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Thu 21-04-2022 18:39:29:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Thu 21-04-2022 18:39:29:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Thu 21-04-2022 18:39:29:: INFO    : Estimated bmpersrc_th =   43.55
+Thu 21-04-2022 18:39:29:: INFO    : Parameter confused is False
+Thu 21-04-2022 18:39:29:: USERINFO: --> Calculating background rms and mean images
+Thu 21-04-2022 18:39:29:: INFO    : Estimated size of brightest source (pixels) = 5
+Thu 21-04-2022 18:39:30:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Thu 21-04-2022 18:40:07:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Thu 21-04-2022 18:40:07:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Thu 21-04-2022 18:40:42:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels
+Thu 21-04-2022 18:40:42:: INFO    : Background rms and mean images computed
+Thu 21-04-2022 18:40:42:: USERINFO: --> Variation in rms image significant
+Thu 21-04-2022 18:40:42:: USERINFO: --> Using 2D map for background rms
+Thu 21-04-2022 18:40:42:: USERINFO: --> Variation in mean image significant
+Thu 21-04-2022 18:40:42:: USERINFO: --> Using 2D map for background mean
+Thu 21-04-2022 18:40:42:: USERINFO: Min/max values of background rms map .... : (2.98e-06, 2.59e-03) Jy/beam
+Thu 21-04-2022 18:40:42:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 4.15e-03) Jy/beam
+Thu 21-04-2022 18:40:42:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Thu 21-04-2022 18:40:42:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Thu 21-04-2022 18:40:42:: USERINFO: Minimum number of pixels per island ..... : 14
+Thu 21-04-2022 18:40:48:: USERINFO: Number of islands found ................. : 4733
+Thu 21-04-2022 18:41:23:: USERINFO: Total number of Gaussians fit to image .. : 5141
+Thu 21-04-2022 18:41:23:: USERINFO: Total flux density in model ............. : 2.563 Jy
+Thu 21-04-2022 18:41:25:: USERINFO: --> Grouping Gaussians into sources
+Thu 21-04-2022 18:41:33:: USERINFO: Number of sources formed from Gaussians   : 4946
+Thu 21-04-2022 18:41:33:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #80 (x=98, y=953)
+                                        Island #268 (x=286, y=2553)
+                                        Island #359 (x=381, y=1246)
+                                        Island #433 (x=437, y=2169)
+                                        Island #492 (x=487, y=0)
+                                        Island #677 (x=632, y=2252)
+                                        Island #754 (x=690, y=3196)
+                                        Island #860 (x=775, y=1806)
+                                        Island #957 (x=847, y=1737)
+                                        Island #1034 (x=901, y=1369)
+                                        Island #1098 (x=941, y=1450)
+                                        Island #1113 (x=953, y=2919)
+                                        Island #1211 (x=1007, y=3070)
+                                        Island #1223 (x=1008, y=2874)
+                                        Island #1351 (x=1092, y=1309)
+                                        Island #1446 (x=1153, y=841)
+                                        Island #1571 (x=1227, y=1070)
+                                        Island #1816 (x=1402, y=3386)
+                                        Island #1900 (x=1458, y=2309)
+                                        Island #1945 (x=1489, y=561)
+                                        Island #1989 (x=1514, y=1256)
+                                        Island #1993 (x=1517, y=3431)
+                                        Island #2085 (x=1570, y=1776)
+                                        Island #2258 (x=1674, y=1698)
+                                        Island #2283 (x=1690, y=2805)
+                                        Island #2552 (x=1851, y=1678)
+                                        Island #2619 (x=1886, y=804)
+                                        Island #2681 (x=1919, y=2646)
+                                        Island #2750 (x=1962, y=1472)
+                                        Island #2874 (x=2036, y=1467)
+                                        Island #2924 (x=2064, y=1518)
+                                        Island #2927 (x=2069, y=1670)
+                                        Island #3002 (x=2127, y=997)
+                                        Island #3123 (x=2195, y=2533)
+                                        Island #3441 (x=2425, y=2423)
+                                        Island #3484 (x=2456, y=3616)
+                                        Island #3532 (x=2489, y=3265)
+                                        Island #3619 (x=2552, y=0)
+                                        Island #3796 (x=2694, y=1322)
+                                        Island #4026 (x=2866, y=2960)
+                                        Island #4339 (x=3145, y=1361)
+                                        Island #4383 (x=3187, y=2517)
+                                        Island #4512 (x=3328, y=1991)
+                                        Island #4604 (x=3428, y=2287)
+                                        Island #4729 (x=3616, y=3294)
+                                        Island #4731 (x=3616, y=210)
+                                        Island #4732 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Thu 21-04-2022 18:41:36:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Thu 21-04-2022 18:41:41:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: 1.120e-07 (Jy/beam)
+                                        std. dev: 5.105e-05 (Jy/beam)
+                                            skew: 89.362
+                                        kurtosis: 10556.617
+Thu 21-04-2022 18:41:44:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (30, 10)
+                                        thresh               : 'hard'
+Thu 21-04-2022 18:41:46:: INFO    : Writing Abell85_catalog_BDSF_gaul.fits
+Thu 21-04-2022 18:41:46:: INFO    : Writing Abell85_catalog_BDSF_gaul.reg
+Thu 21-04-2022 18:41:47:: INFO    : Writing Abell85_catalog_BDSF_rsl.fits
+Thu 21-04-2022 18:41:47:: INFO    : Writing Abell85_catalog_BDSF_rsl.reg
+
+========================================================================
+Fri 22-04-2022 12:57:10:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Fri 22-04-2022 12:57:10:: INFO    : PyBDSF version 1.9.1
+Fri 22-04-2022 12:57:10:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        rms_box              = (50, 10)
+                                        thresh_isl           = 4.0
+                                        thresh_pix           = 3.0
+Fri 22-04-2022 12:57:10:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Fri 22-04-2022 12:57:10:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Fri 22-04-2022 12:57:10:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Fri 22-04-2022 12:57:12:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Fri 22-04-2022 12:57:12:: USERINFO: Number of channels ...................... : 12
+Fri 22-04-2022 12:57:12:: USERINFO: Number of Stokes parameters ............. : 1
+Fri 22-04-2022 12:57:12:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Fri 22-04-2022 12:57:12:: INFO    : Equinox of image is 2000.000000.
+Fri 22-04-2022 12:58:03:: USERINFO: --> Channels averaged with uniform weights
+Fri 22-04-2022 12:58:03:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Fri 22-04-2022 12:58:03:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Fri 22-04-2022 12:58:03:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Fri 22-04-2022 12:58:08:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Fri 22-04-2022 12:58:08:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Fri 22-04-2022 12:58:09:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Fri 22-04-2022 12:58:09:: INFO    : Estimated bmpersrc_th =   43.55
+Fri 22-04-2022 12:58:09:: INFO    : Parameter confused is False
+Fri 22-04-2022 12:58:09:: USERINFO: --> Calculating background rms and mean images
+Fri 22-04-2022 12:58:09:: INFO    : Estimated size of brightest source (pixels) = 5
+Fri 22-04-2022 12:58:09:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Fri 22-04-2022 12:58:57:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Fri 22-04-2022 12:58:57:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Fri 22-04-2022 12:59:43:: USERINFO: Using user-specified rms_box ............ : (50, 10) pixels
+Fri 22-04-2022 12:59:43:: INFO    : Background rms and mean images computed
+Fri 22-04-2022 12:59:43:: USERINFO: --> Variation in rms image significant
+Fri 22-04-2022 12:59:43:: USERINFO: --> Using 2D map for background rms
+Fri 22-04-2022 12:59:43:: USERINFO: --> Variation in mean image significant
+Fri 22-04-2022 12:59:43:: USERINFO: --> Using 2D map for background mean
+Fri 22-04-2022 12:59:43:: USERINFO: Min/max values of background rms map .... : (3.72e-06, 2.29e-03) Jy/beam
+Fri 22-04-2022 12:59:43:: USERINFO: Min/max values of background mean map ... : (-3.90e-05, 1.43e-03) Jy/beam
+Fri 22-04-2022 12:59:43:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Fri 22-04-2022 12:59:43:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Fri 22-04-2022 12:59:43:: USERINFO: Minimum number of pixels per island ..... : 14
+Fri 22-04-2022 12:59:49:: USERINFO: Number of islands found ................. : 5181
+Fri 22-04-2022 13:00:29:: USERINFO: Total number of Gaussians fit to image .. : 5565
+Fri 22-04-2022 13:00:29:: USERINFO: Total flux density in model ............. : 2.622 Jy
+Fri 22-04-2022 13:00:30:: USERINFO: --> Grouping Gaussians into sources
+Fri 22-04-2022 13:00:40:: USERINFO: Number of sources formed from Gaussians   : 5364
+Fri 22-04-2022 13:00:40:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #103 (x=113, y=1586)
+                                        Island #318 (x=319, y=2113)
+                                        Island #365 (x=355, y=2642)
+                                        Island #369 (x=362, y=1054)
+                                        Island #500 (x=457, y=970)
+                                        Island #574 (x=513, y=1755)
+                                        Island #725 (x=632, y=2252)
+                                        Island #809 (x=690, y=3196)
+                                        Island #930 (x=775, y=1806)
+                                        Island #1029 (x=831, y=486)
+                                        Island #1116 (x=892, y=2948)
+                                        Island #1131 (x=900, y=1080)
+                                        Island #1162 (x=954, y=2073)
+                                        Island #1163 (x=925, y=2055)
+                                        Island #1200 (x=941, y=1450)
+                                        Island #1312 (x=996, y=775)
+                                        Island #1337 (x=1008, y=2874)
+                                        Island #1367 (x=1025, y=1372)
+                                        Island #1476 (x=1092, y=1309)
+                                        Island #1580 (x=1153, y=841)
+                                        Island #1581 (x=1155, y=1924)
+                                        Island #1935 (x=1367, y=2874)
+                                        Island #1978 (x=1402, y=3386)
+                                        Island #2100 (x=1474, y=2414)
+                                        Island #2123 (x=1489, y=561)
+                                        Island #2167 (x=1514, y=1256)
+                                        Island #2271 (x=1570, y=1776)
+                                        Island #2277 (x=1571, y=1693)
+                                        Island #2472 (x=1674, y=1698)
+                                        Island #2498 (x=1690, y=2805)
+                                        Island #2565 (x=1726, y=2773)
+                                        Island #2568 (x=1733, y=1448)
+                                        Island #2582 (x=1738, y=2063)
+                                        Island #2608 (x=1748, y=1441)
+                                        Island #2692 (x=1793, y=3092)
+                                        Island #2733 (x=1835, y=1428)
+                                        Island #2759 (x=1823, y=2538)
+                                        Island #2797 (x=1851, y=1678)
+                                        Island #2871 (x=1886, y=804)
+                                        Island #2935 (x=1919, y=2646)
+                                        Island #3010 (x=1968, y=1636)
+                                        Island #3019 (x=1962, y=1472)
+                                        Island #3127 (x=2020, y=1631)
+                                        Island #3208 (x=2064, y=1518)
+                                        Island #3252 (x=2095, y=1600)
+                                        Island #3261 (x=2109, y=2496)
+                                        Island #3422 (x=2195, y=2533)
+                                        Island #3482 (x=2234, y=1233)
+                                        Island #3517 (x=2259, y=700)
+                                        Island #3739 (x=2405, y=2490)
+                                        Island #3767 (x=2425, y=2423)
+                                        Island #3814 (x=2456, y=3616)
+                                        Island #4153 (x=2694, y=1322)
+                                        Island #4296 (x=2798, y=2148)
+                                        Island #4318 (x=2812, y=1109)
+                                        Island #4397 (x=2866, y=2960)
+                                        Island #4435 (x=2890, y=1473)
+                                        Island #4450 (x=2899, y=3015)
+                                        Island #4486 (x=2934, y=1627)
+                                        Island #4496 (x=2940, y=1135)
+                                        Island #4499 (x=2942, y=36)
+                                        Island #4590 (x=3019, y=815)
+                                        Island #4628 (x=3045, y=833)
+                                        Island #4645 (x=3067, y=2277)
+                                        Island #4793 (x=3187, y=2517)
+                                        Island #4836 (x=3233, y=2304)
+                                        Island #4887 (x=3285, y=977)
+                                        Island #4964 (x=3355, y=895)
+                                        Island #5031 (x=3428, y=2287)
+                                        Island #5096 (x=3507, y=2668)
+                                        Island #5178 (x=3616, y=3294)
+                                        Island #5179 (x=3616, y=210)
+                                        Island #5180 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Fri 22-04-2022 13:00:43:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Fri 22-04-2022 13:00:48:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: -8.341e-08 (Jy/beam)
+                                        std. dev: 5.038e-05 (Jy/beam)
+                                            skew: 92.294
+                                        kurtosis: 11105.756
+Fri 22-04-2022 13:00:52:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (50, 10)
+                                        thresh               : 'hard'
+Fri 22-04-2022 13:00:54:: INFO    : Writing Abell85_catalog_BDSF_gaul.fits
+Fri 22-04-2022 13:00:54:: INFO    : Writing Abell85_catalog_BDSF_gaul.reg
+Fri 22-04-2022 13:00:55:: INFO    : Writing Abell85_catalog_BDSF_rsl.fits
+Fri 22-04-2022 13:00:55:: INFO    : Writing Abell85_catalog_BDSF_rsl.reg
+
+========================================================================
+Fri 22-04-2022 13:10:18:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Fri 22-04-2022 13:10:18:: INFO    : PyBDSF version 1.9.1
+Fri 22-04-2022 13:10:18:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        interactive          = True
+                                        rms_box              = (50, 10)
+                                        thresh_pix           = 2.0
+Fri 22-04-2022 13:10:18:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Fri 22-04-2022 13:10:18:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Fri 22-04-2022 13:10:18:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Fri 22-04-2022 13:10:21:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Fri 22-04-2022 13:10:21:: USERINFO: Number of channels ...................... : 12
+Fri 22-04-2022 13:10:21:: USERINFO: Number of Stokes parameters ............. : 1
+Fri 22-04-2022 13:10:21:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Fri 22-04-2022 13:10:21:: INFO    : Equinox of image is 2000.000000.
+Fri 22-04-2022 13:11:12:: USERINFO: --> Channels averaged with uniform weights
+Fri 22-04-2022 13:11:12:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Fri 22-04-2022 13:11:12:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Fri 22-04-2022 13:11:12:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Fri 22-04-2022 13:11:17:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Fri 22-04-2022 13:11:17:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Fri 22-04-2022 13:11:17:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Fri 22-04-2022 13:11:17:: INFO    : Estimated bmpersrc_th =   43.55
+Fri 22-04-2022 13:11:17:: INFO    : Parameter confused is False
+Fri 22-04-2022 13:11:17:: USERINFO: --> Calculating background rms and mean images
+Fri 22-04-2022 13:11:17:: INFO    : Estimated size of brightest source (pixels) = 5
+Fri 22-04-2022 13:11:18:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Fri 22-04-2022 13:12:05:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Fri 22-04-2022 13:12:05:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Fri 22-04-2022 13:12:51:: USERINFO: Using user-specified rms_box ............ : (50, 10) pixels
+Fri 22-04-2022 13:12:51:: INFO    : Background rms and mean images computed
+Fri 22-04-2022 13:12:51:: USERINFO: --> Variation in rms image significant
+Fri 22-04-2022 13:12:51:: USERINFO: --> Using 2D map for background rms
+Fri 22-04-2022 13:12:51:: USERINFO: --> Variation in mean image significant
+Fri 22-04-2022 13:12:51:: USERINFO: --> Using 2D map for background mean
+Fri 22-04-2022 13:12:51:: USERINFO: Min/max values of background rms map .... : (3.72e-06, 2.29e-03) Jy/beam
+Fri 22-04-2022 13:12:51:: USERINFO: Min/max values of background mean map ... : (-3.90e-05, 1.43e-03) Jy/beam
+Fri 22-04-2022 13:12:52:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Fri 22-04-2022 13:12:52:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Fri 22-04-2022 13:12:52:: USERINFO: Minimum number of pixels per island ..... : 14
+Fri 22-04-2022 13:13:00:: USERINFO: Number of islands found ................. : 7671
+Fri 22-04-2022 13:16:28:: USERINFO: Total number of Gaussians fit to image .. : 8243
+Fri 22-04-2022 13:16:28:: USERINFO: Total flux density in model ............. : 2.774 Jy
+Fri 22-04-2022 13:16:32:: USERINFO: --> Grouping Gaussians into sources
+Fri 22-04-2022 13:16:46:: USERINFO: Number of sources formed from Gaussians   : 7923
+Fri 22-04-2022 13:16:46:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=4, y=348)
+                                        Island #1 (x=0, y=437)
+                                        Island #6 (x=0, y=1797)
+                                        Island #50 (x=32, y=1043)
+                                        Island #86 (x=54, y=2337)
+                                        Island #97 (x=63, y=2549)
+                                        Island #103 (x=65, y=2395)
+                                        Island #143 (x=90, y=968)
+                                        Island #192 (x=119, y=3093)
+                                        Island #309 (x=201, y=2598)
+                                        Island #321 (x=210, y=235)
+                                        Island #383 (x=242, y=2384)
+                                        Island #415 (x=261, y=765)
+                                        Island #424 (x=266, y=56)
+                                        Island #438 (x=279, y=1360)
+                                        Island #500 (x=309, y=1454)
+                                        Island #579 (x=358, y=267)
+                                        Island #594 (x=369, y=1542)
+                                        Island #614 (x=381, y=1246)
+                                        Island #640 (x=392, y=269)
+                                        Island #646 (x=392, y=2076)
+                                        Island #652 (x=399, y=2518)
+                                        Island #654 (x=395, y=3480)
+                                        Island #675 (x=407, y=1452)
+                                        Island #680 (x=407, y=1250)
+                                        Island #835 (x=487, y=0)
+                                        Island #883 (x=513, y=1755)
+                                        Island #969 (x=557, y=3541)
+                                        Island #970 (x=557, y=1481)
+                                        Island #980 (x=566, y=50)
+                                        Island #990 (x=575, y=1437)
+                                        Island #1011 (x=578, y=3526)
+                                        Island #1054 (x=605, y=2474)
+                                        Island #1115 (x=632, y=2252)
+                                        Island #1160 (x=650, y=1650)
+                                        Island #1196 (x=668, y=2474)
+                                        Island #1215 (x=674, y=122)
+                                        Island #1235 (x=687, y=1035)
+                                        Island #1239 (x=687, y=2126)
+                                        Island #1240 (x=690, y=3196)
+                                        Island #1313 (x=724, y=2568)
+                                        Island #1318 (x=725, y=2736)
+                                        Island #1378 (x=756, y=622)
+                                        Island #1417 (x=775, y=1806)
+                                        Island #1491 (x=810, y=637)
+                                        Island #1562 (x=847, y=1737)
+                                        Island #1687 (x=893, y=2269)
+                                        Island #1736 (x=954, y=2073)
+                                        Island #1774 (x=932, y=2764)
+                                        Island #1776 (x=931, y=3361)
+                                        Island #1783 (x=941, y=1450)
+                                        Island #1964 (x=1008, y=2874)
+                                        Island #1983 (x=1017, y=87)
+                                        Island #2011 (x=1025, y=3612)
+                                        Island #2018 (x=1031, y=694)
+                                        Island #2115 (x=1073, y=718)
+                                        Island #2122 (x=1074, y=668)
+                                        Island #2169 (x=1092, y=1309)
+                                        Island #2172 (x=1092, y=2795)
+                                        Island #2251 (x=1122, y=2758)
+                                        Island #2327 (x=1153, y=841)
+                                        Island #2374 (x=1176, y=3027)
+                                        Island #2415 (x=1188, y=3613)
+                                        Island #2433 (x=1200, y=2186)
+                                        Island #2489 (x=1224, y=191)
+                                        Island #2492 (x=1224, y=1685)
+                                        Island #2498 (x=1227, y=1070)
+                                        Island #2629 (x=1282, y=1442)
+                                        Island #2632 (x=1280, y=2005)
+                                        Island #2650 (x=1289, y=492)
+                                        Island #2670 (x=1300, y=2441)
+                                        Island #2685 (x=1305, y=662)
+                                        Island #2727 (x=1328, y=1763)
+                                        Island #2736 (x=1333, y=838)
+                                        Island #2860 (x=1385, y=2929)
+                                        Island #3031 (x=1458, y=2309)
+                                        Island #3082 (x=1479, y=2117)
+                                        Island #3112 (x=1489, y=561)
+                                        Island #3122 (x=1493, y=180)
+                                        Island #3171 (x=1514, y=1256)
+                                        Island #3176 (x=1517, y=3431)
+                                        Island #3242 (x=1541, y=1871)
+                                        Island #3243 (x=1542, y=2499)
+                                        Island #3281 (x=1555, y=3499)
+                                        Island #3290 (x=1557, y=733)
+                                        Island #3325 (x=1572, y=356)
+                                        Island #3344 (x=1576, y=2658)
+                                        Island #3389 (x=1594, y=2477)
+                                        Island #3445 (x=1615, y=440)
+                                        Island #3578 (x=1670, y=495)
+                                        Island #3597 (x=1674, y=1698)
+                                        Island #3622 (x=1685, y=563)
+                                        Island #3636 (x=1690, y=2805)
+                                        Island #3671 (x=1698, y=2232)
+                                        Island #3707 (x=1711, y=544)
+                                        Island #3747 (x=1726, y=2773)
+                                        Island #3750 (x=1731, y=1450)
+                                        Island #3773 (x=1738, y=2063)
+                                        Island #3815 (x=1751, y=3579)
+                                        Island #3816 (x=1755, y=61)
+                                        Island #3844 (x=1762, y=3616)
+                                        Island #3872 (x=1770, y=2887)
+                                        Island #3913 (x=1788, y=1090)
+                                        Island #3978 (x=1812, y=630)
+                                        Island #3979 (x=1835, y=1428)
+                                        Island #4004 (x=1820, y=500)
+                                        Island #4016 (x=1823, y=2538)
+                                        Island #4021 (x=1822, y=3136)
+                                        Island #4052 (x=1843, y=1779)
+                                        Island #4074 (x=1851, y=1678)
+                                        Island #4125 (x=1867, y=2831)
+                                        Island #4157 (x=1878, y=3056)
+                                        Island #4177 (x=1886, y=804)
+                                        Island #4255 (x=1919, y=2646)
+                                        Island #4364 (x=1956, y=2752)
+                                        Island #4365 (x=1968, y=1636)
+                                        Island #4408 (x=1980, y=1552)
+                                        Island #4462 (x=1992, y=2560)
+                                        Island #4467 (x=1992, y=3449)
+                                        Island #4495 (x=2008, y=1718)
+                                        Island #4525 (x=2020, y=1631)
+                                        Island #4549 (x=2036, y=1467)
+                                        Island #4560 (x=2036, y=1609)
+                                        Island #4595 (x=2046, y=1254)
+                                        Island #4629 (x=2058, y=3592)
+                                        Island #4641 (x=2064, y=1518)
+                                        Island #4643 (x=2065, y=272)
+                                        Island #4655 (x=2070, y=1621)
+                                        Island #4704 (x=2094, y=1600)
+                                        Island #4710 (x=2100, y=2737)
+                                        Island #4742 (x=2111, y=1733)
+                                        Island #4773 (x=2127, y=997)
+                                        Island #4805 (x=2140, y=3381)
+                                        Island #4942 (x=2187, y=696)
+                                        Island #4960 (x=2195, y=2533)
+                                        Island #4986 (x=2206, y=3358)
+                                        Island #5198 (x=2304, y=862)
+                                        Island #5241 (x=2328, y=2781)
+                                        Island #5263 (x=2339, y=1088)
+                                        Island #5320 (x=2364, y=2977)
+                                        Island #5336 (x=2365, y=3381)
+                                        Island #5354 (x=2376, y=1886)
+                                        Island #5416 (x=2405, y=2490)
+                                        Island #5417 (x=2400, y=500)
+                                        Island #5448 (x=2417, y=1562)
+                                        Island #5457 (x=2420, y=3274)
+                                        Island #5469 (x=2429, y=653)
+                                        Island #5475 (x=2432, y=2992)
+                                        Island #5482 (x=2434, y=2909)
+                                        Island #5529 (x=2456, y=3616)
+                                        Island #5538 (x=2457, y=813)
+                                        Island #5571 (x=2470, y=3571)
+                                        Island #5595 (x=2484, y=517)
+                                        Island #5601 (x=2492, y=553)
+                                        Island #5603 (x=2498, y=926)
+                                        Island #5651 (x=2508, y=687)
+                                        Island #5678 (x=2516, y=2215)
+                                        Island #5735 (x=2552, y=0)
+                                        Island #5840 (x=2595, y=3484)
+                                        Island #5858 (x=2606, y=732)
+                                        Island #5933 (x=2643, y=2742)
+                                        Island #5943 (x=2647, y=1121)
+                                        Island #5974 (x=2664, y=51)
+                                        Island #5991 (x=2674, y=1636)
+                                        Island #6023 (x=2689, y=3380)
+                                        Island #6096 (x=2723, y=1238)
+                                        Island #6099 (x=2727, y=3540)
+                                        Island #6136 (x=2746, y=384)
+                                        Island #6196 (x=2764, y=2499)
+                                        Island #6251 (x=2798, y=2148)
+                                        Island #6256 (x=2795, y=1251)
+                                        Island #6264 (x=2796, y=2239)
+                                        Island #6278 (x=2805, y=2876)
+                                        Island #6298 (x=2813, y=3616)
+                                        Island #6397 (x=2866, y=2960)
+                                        Island #6436 (x=2884, y=3300)
+                                        Island #6474 (x=2899, y=3015)
+                                        Island #6523 (x=2928, y=2624)
+                                        Island #6542 (x=2934, y=1627)
+                                        Island #6560 (x=2942, y=36)
+                                        Island #6572 (x=2948, y=2059)
+                                        Island #6710 (x=3019, y=815)
+                                        Island #6713 (x=3017, y=3095)
+                                        Island #6725 (x=3019, y=2242)
+                                        Island #6813 (x=3073, y=2404)
+                                        Island #6848 (x=3088, y=2481)
+                                        Island #6922 (x=3127, y=1957)
+                                        Island #6948 (x=3141, y=1065)
+                                        Island #7004 (x=3168, y=2037)
+                                        Island #7010 (x=3169, y=86)
+                                        Island #7024 (x=3179, y=2443)
+                                        Island #7035 (x=3187, y=2517)
+                                        Island #7066 (x=3212, y=2297)
+                                        Island #7074 (x=3220, y=562)
+                                        Island #7131 (x=3246, y=1305)
+                                        Island #7134 (x=3246, y=2566)
+                                        Island #7187 (x=3282, y=815)
+                                        Island #7230 (x=3300, y=3113)
+                                        Island #7259 (x=3325, y=1934)
+                                        Island #7312 (x=3360, y=1751)
+                                        Island #7330 (x=3375, y=158)
+                                        Island #7364 (x=3395, y=2429)
+                                        Island #7405 (x=3419, y=2373)
+                                        Island #7412 (x=3428, y=2287)
+                                        Island #7486 (x=3489, y=3233)
+                                        Island #7521 (x=3507, y=2668)
+                                        Island #7542 (x=3512, y=2762)
+                                        Island #7546 (x=3519, y=2480)
+                                        Island #7634 (x=3600, y=2067)
+                                        Island #7664 (x=3616, y=3294)
+                                        Island #7668 (x=3616, y=210)
+                                        Island #7669 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Fri 22-04-2022 13:16:51:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Fri 22-04-2022 13:16:58:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: -5.877e-07 (Jy/beam)
+                                        std. dev: 5.004e-05 (Jy/beam)
+                                            skew: 93.571
+                                        kurtosis: 11369.235
+Fri 22-04-2022 13:19:06:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (50, 10)
+                                        thresh               : 'hard'
+Fri 22-04-2022 13:19:09:: INFO    : Writing Abell85_catalog_BDSF_gaul.fits
+Fri 22-04-2022 13:19:09:: INFO    : Writing Abell85_catalog_BDSF_gaul.reg
+Fri 22-04-2022 13:19:11:: INFO    : Writing Abell85_catalog_BDSF_rsl.fits
+Fri 22-04-2022 13:19:12:: INFO    : Writing Abell85_catalog_BDSF_rsl.reg
+
+========================================================================
+Fri 22-04-2022 13:27:35:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Fri 22-04-2022 13:27:35:: INFO    : PyBDSF version 1.9.1
+Fri 22-04-2022 13:27:35:: INFO    : Non-default input parameters:
+                                        adaptive_rms_box     = True
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        rms_box              = (100, 30)
+                                        rms_box_bright       = (30, 10)
+Fri 22-04-2022 13:27:35:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Fri 22-04-2022 13:27:35:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Fri 22-04-2022 13:27:35:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Fri 22-04-2022 13:27:38:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Fri 22-04-2022 13:27:38:: USERINFO: Number of channels ...................... : 12
+Fri 22-04-2022 13:27:38:: USERINFO: Number of Stokes parameters ............. : 1
+Fri 22-04-2022 13:27:38:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Fri 22-04-2022 13:27:38:: INFO    : Equinox of image is 2000.000000.
+Fri 22-04-2022 13:28:29:: USERINFO: --> Channels averaged with uniform weights
+Fri 22-04-2022 13:28:29:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Fri 22-04-2022 13:28:29:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Fri 22-04-2022 13:28:29:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Fri 22-04-2022 13:28:34:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Fri 22-04-2022 13:28:34:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Fri 22-04-2022 13:28:34:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Fri 22-04-2022 13:28:34:: INFO    : Estimated bmpersrc_th =   43.55
+Fri 22-04-2022 13:28:34:: INFO    : Parameter confused is False
+Fri 22-04-2022 13:28:34:: USERINFO: --> Calculating background rms and mean images
+Fri 22-04-2022 13:28:34:: INFO    : Estimated size of brightest source (pixels) = 5
+Fri 22-04-2022 13:28:34:: USERINFO: --> Using adaptive scaling of rms_box
+Fri 22-04-2022 13:28:35:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Fri 22-04-2022 13:29:21:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Fri 22-04-2022 13:29:21:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Fri 22-04-2022 13:30:06:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels (small scale)
+Fri 22-04-2022 13:30:06:: USERINFO: Using user-specified rms_box ............ : (100, 30) pixels (large scale)
+Fri 22-04-2022 13:30:06:: USERINFO: Number of sources using small scale ..... : 32
+Fri 22-04-2022 13:30:06:: INFO    : Background rms and mean images computed
+Fri 22-04-2022 13:30:06:: USERINFO: --> Using 2D map for background rms
+Fri 22-04-2022 13:30:06:: USERINFO: --> Variation in mean image significant
+Fri 22-04-2022 13:30:06:: USERINFO: --> Using 2D map for background mean
+Fri 22-04-2022 13:30:06:: USERINFO: Min/max values of background rms map .... : (4.58e-06, 4.29e-04) Jy/beam
+Fri 22-04-2022 13:30:06:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 1.66e-04) Jy/beam
+Fri 22-04-2022 13:30:06:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Fri 22-04-2022 13:30:06:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Fri 22-04-2022 13:30:06:: USERINFO: Minimum number of pixels per island ..... : 14
+Fri 22-04-2022 13:30:13:: USERINFO: Number of islands found ................. : 5162
+Fri 22-04-2022 13:46:17:: USERINFO: Total number of Gaussians fit to image .. : 6006
+Fri 22-04-2022 13:46:17:: USERINFO: Total flux density in model ............. : 2.861 Jy
+Fri 22-04-2022 13:46:18:: USERINFO: --> Grouping Gaussians into sources
+Fri 22-04-2022 13:46:32:: USERINFO: Number of sources formed from Gaussians   : 5572
+Fri 22-04-2022 13:46:32:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #5 (x=0, y=1797)
+                                        Island #233 (x=228, y=2524)
+                                        Island #400 (x=381, y=1246)
+                                        Island #543 (x=487, y=0)
+                                        Island #580 (x=513, y=1755)
+                                        Island #734 (x=632, y=2252)
+                                        Island #809 (x=685, y=1584)
+                                        Island #812 (x=687, y=1035)
+                                        Island #935 (x=775, y=1806)
+                                        Island #1204 (x=941, y=1450)
+                                        Island #1340 (x=1008, y=2874)
+                                        Island #1353 (x=1016, y=2864)
+                                        Island #1469 (x=1092, y=1309)
+                                        Island #1575 (x=1153, y=841)
+                                        Island #1708 (x=1227, y=1070)
+                                        Island #2062 (x=1458, y=2309)
+                                        Island #2116 (x=1489, y=561)
+                                        Island #2166 (x=1517, y=3431)
+                                        Island #2244 (x=1558, y=1172)
+                                        Island #2266 (x=1570, y=1776)
+                                        Island #2270 (x=1571, y=1693)
+                                        Island #2457 (x=1674, y=1698)
+                                        Island #2483 (x=1690, y=2805)
+                                        Island #2567 (x=1738, y=2063)
+                                        Island #2597 (x=1755, y=61)
+                                        Island #2609 (x=1762, y=3616)
+                                        Island #2730 (x=1820, y=500)
+                                        Island #2740 (x=1823, y=2538)
+                                        Island #2760 (x=1851, y=402)
+                                        Island #2776 (x=1851, y=1678)
+                                        Island #2845 (x=1886, y=804)
+                                        Island #2909 (x=1919, y=2646)
+                                        Island #2986 (x=1973, y=1651)
+                                        Island #3019 (x=2008, y=1718)
+                                        Island #3072 (x=2030, y=1549)
+                                        Island #3171 (x=2064, y=1518)
+                                        Island #3174 (x=2070, y=1621)
+                                        Island #3223 (x=2102, y=1662)
+                                        Island #3258 (x=2127, y=997)
+                                        Island #3470 (x=2259, y=700)
+                                        Island #3687 (x=2402, y=2731)
+                                        Island #3766 (x=2456, y=3616)
+                                        Island #3795 (x=2470, y=3571)
+                                        Island #3810 (x=2480, y=1619)
+                                        Island #3821 (x=2492, y=553)
+                                        Island #3825 (x=2498, y=926)
+                                        Island #3913 (x=2552, y=0)
+                                        Island #4432 (x=2926, y=1065)
+                                        Island #4448 (x=2934, y=1627)
+                                        Island #4456 (x=2942, y=36)
+                                        Island #4617 (x=3070, y=249)
+                                        Island #4756 (x=3187, y=2517)
+                                        Island #4823 (x=3246, y=1305)
+                                        Island #4837 (x=3258, y=1681)
+                                        Island #5000 (x=3428, y=2287)
+                                        Island #5046 (x=3489, y=3233)
+                                        Island #5067 (x=3507, y=2668)
+                                        Island #5158 (x=3616, y=3294)
+                                        Island #5160 (x=3616, y=210)
+                                        Island #5161 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Fri 22-04-2022 13:46:35:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Fri 22-04-2022 13:46:41:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: -8.764e-07 (Jy/beam)
+                                        std. dev: 1.486e-05 (Jy/beam)
+                                            skew: 9.425
+                                        kurtosis: 608.852
+Fri 22-04-2022 13:46:44:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        thresh               : 'hard'
+Fri 22-04-2022 13:46:46:: INFO    : Writing Abell85_catalog_BDSF_gaul.fits
+Fri 22-04-2022 13:46:46:: INFO    : Writing Abell85_catalog_BDSF_gaul.reg
+Fri 22-04-2022 13:46:47:: INFO    : Writing Abell85_catalog_BDSF_rsl.fits
+Fri 22-04-2022 13:46:47:: INFO    : Writing Abell85_catalog_BDSF_rsl.reg
+
+========================================================================
+Fri 22-04-2022 14:13:52:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Fri 22-04-2022 14:13:52:: INFO    : PyBDSF version 1.9.1
+Fri 22-04-2022 14:13:52:: INFO    : Non-default input parameters:
+                                        adaptive_rms_box     = True
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        rms_box              = (100, 30)
+                                        rms_box_bright       = (30, 10)
+Fri 22-04-2022 14:13:52:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Fri 22-04-2022 14:13:52:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Fri 22-04-2022 14:13:52:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Fri 22-04-2022 14:13:55:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Fri 22-04-2022 14:13:55:: USERINFO: Number of channels ...................... : 12
+Fri 22-04-2022 14:13:55:: USERINFO: Number of Stokes parameters ............. : 1
+Fri 22-04-2022 14:13:55:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Fri 22-04-2022 14:13:55:: INFO    : Equinox of image is 2000.000000.
+Fri 22-04-2022 14:14:46:: USERINFO: --> Channels averaged with uniform weights
+Fri 22-04-2022 14:14:46:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Fri 22-04-2022 14:14:46:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Fri 22-04-2022 14:14:46:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Fri 22-04-2022 14:14:51:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Fri 22-04-2022 14:14:51:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Fri 22-04-2022 14:14:51:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Fri 22-04-2022 14:14:51:: INFO    : Estimated bmpersrc_th =   43.55
+Fri 22-04-2022 14:14:51:: INFO    : Parameter confused is False
+Fri 22-04-2022 14:14:51:: USERINFO: --> Calculating background rms and mean images
+Fri 22-04-2022 14:14:51:: INFO    : Estimated size of brightest source (pixels) = 5
+Fri 22-04-2022 14:14:51:: USERINFO: --> Using adaptive scaling of rms_box
+Fri 22-04-2022 14:14:52:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Fri 22-04-2022 14:15:38:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Fri 22-04-2022 14:15:38:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Fri 22-04-2022 14:16:23:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels (small scale)
+Fri 22-04-2022 14:16:23:: USERINFO: Using user-specified rms_box ............ : (100, 30) pixels (large scale)
+Fri 22-04-2022 14:16:23:: USERINFO: Number of sources using small scale ..... : 32
+Fri 22-04-2022 14:16:23:: INFO    : Background rms and mean images computed
+Fri 22-04-2022 14:16:23:: USERINFO: --> Using 2D map for background rms
+Fri 22-04-2022 14:16:23:: USERINFO: --> Variation in mean image significant
+Fri 22-04-2022 14:16:23:: USERINFO: --> Using 2D map for background mean
+Fri 22-04-2022 14:16:23:: USERINFO: Min/max values of background rms map .... : (4.58e-06, 4.29e-04) Jy/beam
+Fri 22-04-2022 14:16:23:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 1.66e-04) Jy/beam
+Fri 22-04-2022 14:16:23:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Fri 22-04-2022 14:16:23:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Fri 22-04-2022 14:16:24:: USERINFO: Minimum number of pixels per island ..... : 14
+Fri 22-04-2022 14:16:30:: USERINFO: Number of islands found ................. : 5162
+Fri 22-04-2022 14:32:36:: USERINFO: Total number of Gaussians fit to image .. : 6006
+Fri 22-04-2022 14:32:36:: USERINFO: Total flux density in model ............. : 2.861 Jy
+Fri 22-04-2022 14:32:38:: USERINFO: --> Grouping Gaussians into sources
+Fri 22-04-2022 14:32:52:: USERINFO: Number of sources formed from Gaussians   : 5572
+Fri 22-04-2022 14:32:52:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #5 (x=0, y=1797)
+                                        Island #233 (x=228, y=2524)
+                                        Island #400 (x=381, y=1246)
+                                        Island #543 (x=487, y=0)
+                                        Island #580 (x=513, y=1755)
+                                        Island #734 (x=632, y=2252)
+                                        Island #809 (x=685, y=1584)
+                                        Island #812 (x=687, y=1035)
+                                        Island #935 (x=775, y=1806)
+                                        Island #1204 (x=941, y=1450)
+                                        Island #1340 (x=1008, y=2874)
+                                        Island #1353 (x=1016, y=2864)
+                                        Island #1469 (x=1092, y=1309)
+                                        Island #1575 (x=1153, y=841)
+                                        Island #1708 (x=1227, y=1070)
+                                        Island #2062 (x=1458, y=2309)
+                                        Island #2116 (x=1489, y=561)
+                                        Island #2166 (x=1517, y=3431)
+                                        Island #2244 (x=1558, y=1172)
+                                        Island #2266 (x=1570, y=1776)
+                                        Island #2270 (x=1571, y=1693)
+                                        Island #2457 (x=1674, y=1698)
+                                        Island #2483 (x=1690, y=2805)
+                                        Island #2567 (x=1738, y=2063)
+                                        Island #2597 (x=1755, y=61)
+                                        Island #2609 (x=1762, y=3616)
+                                        Island #2730 (x=1820, y=500)
+                                        Island #2740 (x=1823, y=2538)
+                                        Island #2760 (x=1851, y=402)
+                                        Island #2776 (x=1851, y=1678)
+                                        Island #2845 (x=1886, y=804)
+                                        Island #2909 (x=1919, y=2646)
+                                        Island #2986 (x=1973, y=1651)
+                                        Island #3019 (x=2008, y=1718)
+                                        Island #3072 (x=2030, y=1549)
+                                        Island #3171 (x=2064, y=1518)
+                                        Island #3174 (x=2070, y=1621)
+                                        Island #3223 (x=2102, y=1662)
+                                        Island #3258 (x=2127, y=997)
+                                        Island #3470 (x=2259, y=700)
+                                        Island #3687 (x=2402, y=2731)
+                                        Island #3766 (x=2456, y=3616)
+                                        Island #3795 (x=2470, y=3571)
+                                        Island #3810 (x=2480, y=1619)
+                                        Island #3821 (x=2492, y=553)
+                                        Island #3825 (x=2498, y=926)
+                                        Island #3913 (x=2552, y=0)
+                                        Island #4432 (x=2926, y=1065)
+                                        Island #4448 (x=2934, y=1627)
+                                        Island #4456 (x=2942, y=36)
+                                        Island #4617 (x=3070, y=249)
+                                        Island #4756 (x=3187, y=2517)
+                                        Island #4823 (x=3246, y=1305)
+                                        Island #4837 (x=3258, y=1681)
+                                        Island #5000 (x=3428, y=2287)
+                                        Island #5046 (x=3489, y=3233)
+                                        Island #5067 (x=3507, y=2668)
+                                        Island #5158 (x=3616, y=3294)
+                                        Island #5160 (x=3616, y=210)
+                                        Island #5161 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Fri 22-04-2022 14:32:55:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Fri 22-04-2022 14:33:01:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: -8.764e-07 (Jy/beam)
+                                        std. dev: 1.486e-05 (Jy/beam)
+                                            skew: 9.425
+                                        kurtosis: 608.852
+Fri 22-04-2022 14:33:05:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        thresh               : 'hard'
+Fri 22-04-2022 14:33:07:: INFO    : Writing Abell85_catalog_BDSF_adapbox_gaul.fits
+Fri 22-04-2022 14:33:07:: INFO    : Writing Abell85_catalog_BDSF_adapbox_gaul.reg
+Fri 22-04-2022 14:33:08:: INFO    : Writing Abell85_catalog_BDSF_adapbox_rsl.fits
+Fri 22-04-2022 14:33:09:: INFO    : Writing Abell85_catalog_BDSF_adapbox_rsl.reg
+
+========================================================================
+Fri 22-04-2022 14:35:31:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Fri 22-04-2022 14:35:31:: INFO    : PyBDSF version 1.9.1
+Fri 22-04-2022 14:35:31:: INFO    : Non-default input parameters:
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        rms_box              = (30, 10)
+Fri 22-04-2022 14:35:31:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Fri 22-04-2022 14:35:31:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Fri 22-04-2022 14:35:31:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Fri 22-04-2022 14:35:33:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Fri 22-04-2022 14:35:33:: USERINFO: Number of channels ...................... : 12
+Fri 22-04-2022 14:35:33:: USERINFO: Number of Stokes parameters ............. : 1
+Fri 22-04-2022 14:35:33:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Fri 22-04-2022 14:35:33:: INFO    : Equinox of image is 2000.000000.
+Fri 22-04-2022 14:36:25:: USERINFO: --> Channels averaged with uniform weights
+Fri 22-04-2022 14:36:25:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Fri 22-04-2022 14:36:25:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Fri 22-04-2022 14:36:25:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Fri 22-04-2022 14:36:30:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Fri 22-04-2022 14:36:30:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Fri 22-04-2022 14:36:30:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Fri 22-04-2022 14:36:30:: INFO    : Estimated bmpersrc_th =   43.55
+Fri 22-04-2022 14:36:30:: INFO    : Parameter confused is False
+Fri 22-04-2022 14:36:30:: USERINFO: --> Calculating background rms and mean images
+Fri 22-04-2022 14:36:30:: INFO    : Estimated size of brightest source (pixels) = 5
+Fri 22-04-2022 14:36:30:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Fri 22-04-2022 14:37:08:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Fri 22-04-2022 14:37:08:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Fri 22-04-2022 14:37:43:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels
+Fri 22-04-2022 14:37:43:: INFO    : Background rms and mean images computed
+Fri 22-04-2022 14:37:43:: USERINFO: --> Variation in rms image significant
+Fri 22-04-2022 14:37:43:: USERINFO: --> Using 2D map for background rms
+Fri 22-04-2022 14:37:43:: USERINFO: --> Variation in mean image significant
+Fri 22-04-2022 14:37:43:: USERINFO: --> Using 2D map for background mean
+Fri 22-04-2022 14:37:43:: USERINFO: Min/max values of background rms map .... : (2.98e-06, 2.59e-03) Jy/beam
+Fri 22-04-2022 14:37:43:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 4.15e-03) Jy/beam
+Fri 22-04-2022 14:37:43:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Fri 22-04-2022 14:37:43:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Fri 22-04-2022 14:37:43:: USERINFO: Minimum number of pixels per island ..... : 14
+Fri 22-04-2022 14:37:49:: USERINFO: Number of islands found ................. : 4733
+Fri 22-04-2022 14:38:24:: USERINFO: Total number of Gaussians fit to image .. : 5141
+Fri 22-04-2022 14:38:24:: USERINFO: Total flux density in model ............. : 2.563 Jy
+Fri 22-04-2022 14:38:25:: USERINFO: --> Grouping Gaussians into sources
+Fri 22-04-2022 14:38:33:: USERINFO: Number of sources formed from Gaussians   : 4946
+Fri 22-04-2022 14:38:33:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #80 (x=98, y=953)
+                                        Island #268 (x=286, y=2553)
+                                        Island #359 (x=381, y=1246)
+                                        Island #433 (x=437, y=2169)
+                                        Island #492 (x=487, y=0)
+                                        Island #677 (x=632, y=2252)
+                                        Island #754 (x=690, y=3196)
+                                        Island #860 (x=775, y=1806)
+                                        Island #957 (x=847, y=1737)
+                                        Island #1034 (x=901, y=1369)
+                                        Island #1098 (x=941, y=1450)
+                                        Island #1113 (x=953, y=2919)
+                                        Island #1211 (x=1007, y=3070)
+                                        Island #1223 (x=1008, y=2874)
+                                        Island #1351 (x=1092, y=1309)
+                                        Island #1446 (x=1153, y=841)
+                                        Island #1571 (x=1227, y=1070)
+                                        Island #1816 (x=1402, y=3386)
+                                        Island #1900 (x=1458, y=2309)
+                                        Island #1945 (x=1489, y=561)
+                                        Island #1989 (x=1514, y=1256)
+                                        Island #1993 (x=1517, y=3431)
+                                        Island #2085 (x=1570, y=1776)
+                                        Island #2258 (x=1674, y=1698)
+                                        Island #2283 (x=1690, y=2805)
+                                        Island #2552 (x=1851, y=1678)
+                                        Island #2619 (x=1886, y=804)
+                                        Island #2681 (x=1919, y=2646)
+                                        Island #2750 (x=1962, y=1472)
+                                        Island #2874 (x=2036, y=1467)
+                                        Island #2924 (x=2064, y=1518)
+                                        Island #2927 (x=2069, y=1670)
+                                        Island #3002 (x=2127, y=997)
+                                        Island #3123 (x=2195, y=2533)
+                                        Island #3441 (x=2425, y=2423)
+                                        Island #3484 (x=2456, y=3616)
+                                        Island #3532 (x=2489, y=3265)
+                                        Island #3619 (x=2552, y=0)
+                                        Island #3796 (x=2694, y=1322)
+                                        Island #4026 (x=2866, y=2960)
+                                        Island #4339 (x=3145, y=1361)
+                                        Island #4383 (x=3187, y=2517)
+                                        Island #4512 (x=3328, y=1991)
+                                        Island #4604 (x=3428, y=2287)
+                                        Island #4729 (x=3616, y=3294)
+                                        Island #4731 (x=3616, y=210)
+                                        Island #4732 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Fri 22-04-2022 14:38:36:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Fri 22-04-2022 14:38:41:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: 1.120e-07 (Jy/beam)
+                                        std. dev: 5.105e-05 (Jy/beam)
+                                            skew: 89.362
+                                        kurtosis: 10556.617
+Fri 22-04-2022 14:38:44:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        rms_box_bright       : (30, 10)
+                                        thresh               : 'hard'
+Fri 22-04-2022 14:38:46:: INFO    : Writing Abell85_catalog_BDSF_gaul.fits
+Fri 22-04-2022 14:38:46:: INFO    : Writing Abell85_catalog_BDSF_gaul.reg
+Fri 22-04-2022 14:38:47:: INFO    : Writing Abell85_catalog_BDSF_rsl.fits
+Fri 22-04-2022 14:38:47:: INFO    : Writing Abell85_catalog_BDSF_rsl.reg
+
+========================================================================
+Fri 22-04-2022 14:38:50:: INFO    : Processing Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits
+Fri 22-04-2022 14:38:50:: INFO    : PyBDSF version 1.9.1
+Fri 22-04-2022 14:38:50:: INFO    : Non-default input parameters:
+                                        adaptive_rms_box     = True
+                                        filename             = 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+                                        rms_box              = (100, 30)
+                                        rms_box_bright       = (30, 10)
+Fri 22-04-2022 14:38:50:: USERINFO: --> Opened 'Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits'
+Fri 22-04-2022 14:38:50:: INFO    : Original data shape of Abell_85_aFix_pol_I_Farcsec_fcube_cor.fits: (1, 12, 3617, 3617)
+Fri 22-04-2022 14:38:50:: INFO    : Final data shape (npol, nchan, x, y): (1, 12, 3617, 3617)
+Fri 22-04-2022 14:38:53:: USERINFO: Image size .............................. : (3617, 3617) pixels
+Fri 22-04-2022 14:38:53:: USERINFO: Number of channels ...................... : 12
+Fri 22-04-2022 14:38:53:: USERINFO: Number of Stokes parameters ............. : 1
+Fri 22-04-2022 14:38:53:: USERINFO: Beam shape (major, minor, pos angle) .... : (2.14099e-03, 1.97234e-03, -8.2) degrees
+Fri 22-04-2022 14:38:53:: INFO    : Equinox of image is 2000.000000.
+Fri 22-04-2022 14:39:45:: USERINFO: --> Channels averaged with uniform weights
+Fri 22-04-2022 14:39:45:: USERINFO: --> Source extraction will be done on averaged ("ch0") image
+Fri 22-04-2022 14:39:45:: USERINFO: Frequency of averaged image ............. : 1600.322 MHz
+Fri 22-04-2022 14:39:45:: USERINFO: Number of blank pixels .................. : 0 (0.0%)
+Fri 22-04-2022 14:39:51:: INFO    : Raw mean (Stokes I) =  0.0086 mJy and raw rms =  0.4819 mJy 
+Fri 22-04-2022 14:39:51:: INFO    : sigma clipped mean (Stokes I) =  -0.0024 mJy and  sigma clipped rms =  0.0112 mJy 
+Fri 22-04-2022 14:39:51:: USERINFO: Flux from sum of (non-blank) pixels ..... : 2.595 Jy
+Fri 22-04-2022 14:39:51:: INFO    : Estimated bmpersrc_th =   43.55
+Fri 22-04-2022 14:39:51:: INFO    : Parameter confused is False
+Fri 22-04-2022 14:39:52:: USERINFO: --> Calculating background rms and mean images
+Fri 22-04-2022 14:39:52:: INFO    : Estimated size of brightest source (pixels) = 5
+Fri 22-04-2022 14:39:52:: USERINFO: --> Using adaptive scaling of rms_box
+Fri 22-04-2022 14:39:52:: INFO    : Maximum extent of largest 10-sigma island using clipped rms (pixels) = 207
+Fri 22-04-2022 14:40:42:: WARNING : Negative values found in rms map interpolated with spline_rank = 3
+Fri 22-04-2022 14:40:42:: WARNING : Using spline_rank = 1 (bilinear interpolation) instead
+Fri 22-04-2022 14:41:30:: USERINFO: Using user-specified rms_box ............ : (30, 10) pixels (small scale)
+Fri 22-04-2022 14:41:30:: USERINFO: Using user-specified rms_box ............ : (100, 30) pixels (large scale)
+Fri 22-04-2022 14:41:30:: USERINFO: Number of sources using small scale ..... : 32
+Fri 22-04-2022 14:41:30:: INFO    : Background rms and mean images computed
+Fri 22-04-2022 14:41:30:: USERINFO: --> Using 2D map for background rms
+Fri 22-04-2022 14:41:30:: USERINFO: --> Variation in mean image significant
+Fri 22-04-2022 14:41:30:: USERINFO: --> Using 2D map for background mean
+Fri 22-04-2022 14:41:30:: USERINFO: Min/max values of background rms map .... : (4.58e-06, 4.29e-04) Jy/beam
+Fri 22-04-2022 14:41:30:: USERINFO: Min/max values of background mean map ... : (-1.38e-04, 1.66e-04) Jy/beam
+Fri 22-04-2022 14:41:31:: USERINFO: --> Expected 5-sigma-clipped false detection rate < fdr_ratio
+Fri 22-04-2022 14:41:31:: USERINFO: --> Using sigma-clipping ('hard') thresholding
+Fri 22-04-2022 14:41:33:: USERINFO: Minimum number of pixels per island ..... : 14
+Fri 22-04-2022 14:41:39:: USERINFO: Number of islands found ................. : 5162
+Fri 22-04-2022 14:57:48:: USERINFO: Total number of Gaussians fit to image .. : 6006
+Fri 22-04-2022 14:57:48:: USERINFO: Total flux density in model ............. : 2.861 Jy
+Fri 22-04-2022 14:57:53:: USERINFO: --> Grouping Gaussians into sources
+Fri 22-04-2022 14:58:08:: USERINFO: Number of sources formed from Gaussians   : 5572
+Fri 22-04-2022 14:58:08:: WARNING : All Gaussians were flagged for the following islands:
+                                        Island #0 (x=0, y=437)
+                                        Island #5 (x=0, y=1797)
+                                        Island #233 (x=228, y=2524)
+                                        Island #400 (x=381, y=1246)
+                                        Island #543 (x=487, y=0)
+                                        Island #580 (x=513, y=1755)
+                                        Island #734 (x=632, y=2252)
+                                        Island #809 (x=685, y=1584)
+                                        Island #812 (x=687, y=1035)
+                                        Island #935 (x=775, y=1806)
+                                        Island #1204 (x=941, y=1450)
+                                        Island #1340 (x=1008, y=2874)
+                                        Island #1353 (x=1016, y=2864)
+                                        Island #1469 (x=1092, y=1309)
+                                        Island #1575 (x=1153, y=841)
+                                        Island #1708 (x=1227, y=1070)
+                                        Island #2062 (x=1458, y=2309)
+                                        Island #2116 (x=1489, y=561)
+                                        Island #2166 (x=1517, y=3431)
+                                        Island #2244 (x=1558, y=1172)
+                                        Island #2266 (x=1570, y=1776)
+                                        Island #2270 (x=1571, y=1693)
+                                        Island #2457 (x=1674, y=1698)
+                                        Island #2483 (x=1690, y=2805)
+                                        Island #2567 (x=1738, y=2063)
+                                        Island #2597 (x=1755, y=61)
+                                        Island #2609 (x=1762, y=3616)
+                                        Island #2730 (x=1820, y=500)
+                                        Island #2740 (x=1823, y=2538)
+                                        Island #2760 (x=1851, y=402)
+                                        Island #2776 (x=1851, y=1678)
+                                        Island #2845 (x=1886, y=804)
+                                        Island #2909 (x=1919, y=2646)
+                                        Island #2986 (x=1973, y=1651)
+                                        Island #3019 (x=2008, y=1718)
+                                        Island #3072 (x=2030, y=1549)
+                                        Island #3171 (x=2064, y=1518)
+                                        Island #3174 (x=2070, y=1621)
+                                        Island #3223 (x=2102, y=1662)
+                                        Island #3258 (x=2127, y=997)
+                                        Island #3470 (x=2259, y=700)
+                                        Island #3687 (x=2402, y=2731)
+                                        Island #3766 (x=2456, y=3616)
+                                        Island #3795 (x=2470, y=3571)
+                                        Island #3810 (x=2480, y=1619)
+                                        Island #3821 (x=2492, y=553)
+                                        Island #3825 (x=2498, y=926)
+                                        Island #3913 (x=2552, y=0)
+                                        Island #4432 (x=2926, y=1065)
+                                        Island #4448 (x=2934, y=1627)
+                                        Island #4456 (x=2942, y=36)
+                                        Island #4617 (x=3070, y=249)
+                                        Island #4756 (x=3187, y=2517)
+                                        Island #4823 (x=3246, y=1305)
+                                        Island #4837 (x=3258, y=1681)
+                                        Island #5000 (x=3428, y=2287)
+                                        Island #5046 (x=3489, y=3233)
+                                        Island #5067 (x=3507, y=2668)
+                                        Island #5158 (x=3616, y=3294)
+                                        Island #5160 (x=3616, y=210)
+                                        Island #5161 (x=3616, y=1886)
+                                    Please check these islands. If they are valid islands and
+                                    should be fit, try adjusting the flagging options (use
+                                    show_fit with "ch0_flagged=True" to see the flagged Gaussians)
+                                    or enabling the wavelet module (with "atrous_do=True").
+                                    To include empty islands in output source catalogs, set
+                                    incl_empty=True in the write_catalog task.
+Fri 22-04-2022 14:58:13:: INFO    : Calculating residual image after subtracting reconstructed gaussians
+Fri 22-04-2022 14:58:19:: INFO    : Statistics of the Gaussian residual image:
+                                            mean: -8.764e-07 (Jy/beam)
+                                        std. dev: 1.486e-05 (Jy/beam)
+                                            skew: 9.425
+                                        kurtosis: 608.852
+Fri 22-04-2022 14:58:26:: INFO    : Internally derived parameters:
+                                        beam                 : (0.002140992, 0.001972343, -8.240263)
+                                        bmpersrc_th          : 43.55365019758241
+                                        frequency            : 1600321955.625
+                                        indir                : './'
+                                        minpix_isl           : 14
+                                        thresh               : 'hard'
+Fri 22-04-2022 14:58:27:: INFO    : Writing Abell85_catalog_BDSF_adapbox_gaul.fits
+Fri 22-04-2022 14:58:28:: INFO    : Writing Abell85_catalog_BDSF_adapbox_gaul.reg
+Fri 22-04-2022 14:58:29:: INFO    : Writing Abell85_catalog_BDSF_adapbox_rsl.fits
+Fri 22-04-2022 14:58:29:: INFO    : Writing Abell85_catalog_BDSF_adapbox_rsl.reg

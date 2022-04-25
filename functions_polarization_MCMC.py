@@ -95,21 +95,19 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
   
     return lp + lnlike_spix(theta, x, y, err, curvature)
 
-
-
   # MCMC POLARIZATION 
   def lnprior_pol(theta):
     if depol == "ExtDepol" or depol == "IntDepol" or depol == "CombDepol":
       p0, chi0, rm, sigma_rm = theta
-      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and sigma_rm>=0. and (-2000 <= rm <= 2000):
+      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and sigma_rm>=0. and (-200 <= rm <= 200):
         return 0.	
     elif depol == 'ExtDepol_RePol': # For ExtDepol_Repol : sigma_RM unconstrained between -inf and +inf
       p0, chi0, rm, sigma_rm = theta
-      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and (-2000 <= rm <= 2000):
+      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and (-200 <= rm <= 200):
         return 0.       
     else: 
       p0, chi0, rm = theta
-      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and (-2000 <= rm <= 2000):
+      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and (-200 <= rm <= 200):
         return 0.
 
     return -numpy.inf

@@ -121,7 +121,7 @@ def convert_units(data, fitsimage):
     data = data/beam2pix # convert to Jy/pix
     return data
      
-def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, linpolselect=False):
+def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, convert=True, jansky=True):
     """
     Given a 2D image in Jy/beam, with a .ds9 regionfile indicating the sources
     and a .fits table with the PyBDSF source parameters (RA,DEC,MAJ,MIN)
@@ -133,6 +133,8 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, linpolselect=
     hdul       -- str                   -- Optional. If we want to call this function many times
                                            with the same fitscube, then it's better to open the
                                            hdul in advance so we don't have to keep loading into memory
+    convert    -- boolean               -- decides if data needs to be converted from Jy/beam to Jy/pix
+    jansky     -- boolean               -- decides if fits file consists of flux measurements or has no unit
 
     RETURNS
     totalflux  -- float  -- the integrated flux of the source in Jy
@@ -146,11 +148,8 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, linpolselect=
 
     
     head = hdul.header
-    if linpolselect==False:
-        data = hdul.data
-    else:
-        hdul = fits.open(fitsimage)
-        data = hdul[0].data
+    data = hdul.data
+
     w  = wcs.WCS(head)
 
     if type(ds9region) == str:
@@ -173,7 +172,7 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, linpolselect=
         plt.show()
 
     # Now convert the units from Jy/beam to Jy/pix
-    if linpolselect==False:
+    if convert==True:
         masked_data = convert_units(masked_data, hdul)
 
     # The total flux of the source is then the sum of the pixels
@@ -200,13 +199,13 @@ def integratedflux(fitsimage, ds9region, i, hdul=None, test=False, linpolselect=
     
     if closehdul: hdul.close()
     
-    if linpolselect:
+    if not jansky:
         return totalflux, Nbeams # flux not given in Jy
-    else:
+    elif jansky:
         return totalflux.value, Nbeams # flux given in Jy
     
 def uncertainty_flux(fitsimage, flux, Nbeams, regionfile_rms=None, rms=None, delta_cal=0.1, hdul=None
-    ,verbose=False):
+    ,verbose=False, rms_image = False):
     """
     Calculate the uncertainty on the integrated flux.
 
@@ -227,6 +226,8 @@ def uncertainty_flux(fitsimage, flux, Nbeams, regionfile_rms=None, rms=None, del
     hdul             -- str                     -- Optional. If we want to call this function many times
                                                    with the same fitscube, then it's better to open the
                                                    hdul in advance so we don't have to keep loading into memory
+    rms_image        -- boolean                 -- If rms plane is inputted as image, so average needs to be calculated over
+                                                   the region instead of rms
 
     RETURNS
     uncertainty   -- uncertainty on the flux
@@ -264,7 +265,10 @@ def uncertainty_flux(fitsimage, flux, Nbeams, regionfile_rms=None, rms=None, del
         # Find how many pixels this empty region covers 
         Npix = np.sum((ellipsemask))
         # Calculate the rms noise in this region
-        rmsnoise = np.sqrt((1./Npix)*(masked_data**2).sum())
+        if not rms_image:
+            rmsnoise = np.sqrt((1./Npix)*(masked_data**2).sum())
+        elif rms_image:
+            rmsnoise = np.nanmean(masked_data)
         if verbose: print ("rms noise in given region: %.2f \muJy/beam"%(rmsnoise*1e6))
 
     else:

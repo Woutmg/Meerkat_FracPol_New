@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import matplotlib.ticker as mtick
 
+# W. Goesaert
+from astropy.constants import c
+
 if __name__ == '__main__':
   mpl.rcParams['xtick.direction']='in'
   mpl.rcParams['ytick.direction']='in'
@@ -17,7 +20,7 @@ if __name__ == '__main__':
   mpl.rcParams['patch.force_edgecolor'] = True
 
 def models(depol, x, norm, a, curv, p0, X0, RM, sigma, obs_i, err_i, obs_q, err_q, obs_u, err_u):
-  freq = (3.e8/np.sqrt(x))*1.e-9
+  freq = (c.value/np.sqrt(x))*1.e-9
   mod_i = norm * freq**(a + curv*np.log10(freq))
   
   if len(x) == len(obs_i):
