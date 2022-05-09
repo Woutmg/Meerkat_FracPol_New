@@ -99,7 +99,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
   def lnprior_pol(theta):
     if depol == "ExtDepol" or depol == "IntDepol" or depol == "CombDepol":
       p0, chi0, rm, sigma_rm = theta
-      if 0.<=p0<=1. and 0.<=chi0<numpy.pi and sigma_rm>=0. and (-200 <= rm <= 200):
+      if 0.<=p0<=1. and -numpy.pi<=chi0<numpy.pi and sigma_rm>=0. and (-200 <= rm <= 200):
         return 0.	
     elif depol == 'ExtDepol_RePol': # For ExtDepol_Repol : sigma_RM unconstrained between -inf and +inf
       p0, chi0, rm, sigma_rm = theta
@@ -331,7 +331,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
     #sys.exit()
     
   elif depol == "ExtDepol":
-    guess = [0.6,1,rm,1] # p0, chi0, RM, sigma_RM
+    guess = [0.6,0,rm,1] # p0, chi0, RM, sigma_RM
     
     # Using Eq 6 in Gabri paper
     errfunc = lambda p, x1, y1, err1, x2, y2, err2, stokes_i: \
@@ -376,8 +376,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
     #   print ("Saving "+plotdir+'../'+'test_samples_%i.npy'%sourcenum)
     #   numpy.save(plotdir+'../'+'test_samples_%i.npy'%sourcenum,samples)
       
-
-
+    samples[:,1] = samples[:,1] % numpy.pi # Range of chi0 was set to -pi to pi to avoid boundary problem -> need to mod samples
     # FIT SUMMARY
     lim_low = 50. - (68.27/2.)
     lim_upp = 50. + (68.27/2.)
