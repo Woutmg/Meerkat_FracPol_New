@@ -99,7 +99,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
   def lnprior_pol(theta):
     if depol == "ExtDepol" or depol == "IntDepol" or depol == "CombDepol":
       p0, chi0, rm, sigma_rm = theta
-      if 0.<=p0<=1. and 0<=chi0<numpy.pi and sigma_rm>=0. and (-200 <= rm <= 200):
+      if 0.<=p0<=1. and sigma_rm>=0. and (-200 <= rm <= 200):# and -numpy.pi<=chi0<numpy.pi
         return 0.	
     elif depol == 'ExtDepol_RePol': # For ExtDepol_Repol : sigma_RM unconstrained between -inf and +inf
       p0, chi0, rm, sigma_rm = theta
@@ -331,7 +331,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
     #sys.exit()
     
   elif depol == "ExtDepol":
-    guess = [0.6,1,rm,1] # p0, chi0, RM, sigma_RM
+    guess = [0.6,0,rm,1] # p0, chi0, RM, sigma_RM
     
     # Using Eq 6 in Gabri paper
     errfunc = lambda p, x1, y1, err1, x2, y2, err2, stokes_i: \
@@ -350,7 +350,7 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
 
     # boundaries on chi0    
     if coeff[1] >= numpy.pi or coeff[1] < 0:
-      coeff[1] = coeff[1] % numpy.pi
+        coeff[1] = coeff[1] % numpy.pi
             
     p0 = coeff[0]
     chi0 = coeff[1]
@@ -362,21 +362,23 @@ def polarization_fitting(wave, fluxI, err_fluxI, fluxQ, err_fluxQ, fluxU
 
     ndim, nwalkers = len(parms), 200
     if overdispersed_start:
-      pos = [parms + numpy.array([0.5,0.5*numpy.pi,100,100])*numpy.random.randn(ndim) for i in range(nwalkers)]
+        pos = numpy.array([parms + numpy.array([0.5,0.5*numpy.pi,100,100])*numpy.random.randn(ndim) for i in range(nwalkers)])
+        pos[:,1] = [0 + 1.e-4*numpy.random.randn(1) for i in range(nwalkers)]
     else:
-      pos = [parms + 1.e-4*numpy.random.randn(ndim) for i in range(nwalkers)]
+        pos = numpy.array([parms + 1.e-4*numpy.random.randn(ndim) for i in range(nwalkers)])
+        pos[:,1] = [0 + 1.e-4*numpy.random.randn(1) for i in range(nwalkers)]
   
     sampler = emcee.EnsembleSampler(nwalkers, ndim, lnprob_pol, args=(wave,fluxQ,err_fluxQ,fluxU,err_fluxU,norm,a,curv))
     
     runs = 1000
     sampler.run_mcmc(pos, runs)
-    burn = 200
+    burn = 300
     samples = sampler.chain[:, burn:, :].reshape((-1, ndim))
     # if sourcenum is not None: 
     #   print ("Saving "+plotdir+'../'+'test_samples_%i.npy'%sourcenum)
     #   numpy.save(plotdir+'../'+'test_samples_%i.npy'%sourcenum,samples)
-      
-    #samples[:,1] = samples[:,1] % numpy.pi # Range of chi0 was set to -pi to pi to avoid boundary problem -> need to mod samples
+
+    samples[:,1] = samples[:,1] % numpy.pi # Range of chi0 was set to -pi to pi to avoid boundary problem -> need to mod samples
     # FIT SUMMARY
     lim_low = 50. - (68.27/2.)
     lim_upp = 50. + (68.27/2.)
